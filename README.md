@@ -23,20 +23,18 @@ Bygget med [designsystemet.no](https://designsystemet.no/).
 | Forside | `/` | Hvorfor en norsk utgave, og hva du finner her |
 | Guide | `/guide/` | Grunnprinsipper, norsk praksis, hensyn i offentlig sektor, metoder |
 | Verktøykasser | `/verktoykasser/` | Katalog over verktøykasser (OECD OPSIs «Toolkit Navigator») |
-| Digital verktøykasse | `/verktoykasser/digitale-offentlige-tjenester/` | Sju faser — norsk introduksjon basert på strukturen i Estlands digiriik.eesti.ee |
+| Digital verktøykasse | `/verktoykasser/digitale-offentlige-tjenester/` | Sju faser, gjenfortalt på norsk fra Estlands digiriik.eesti.ee — alle underartikler og verktøy |
 
 ## Dekning
 
-«Digital verktøykasse» er en introduksjon til **strukturen** i
-[digiriik.eesti.ee](https://digiriik.eesti.ee/), ikke en full oversettelse
-av innholdet:
+«Digital verktøykasse» gjenforteller [digiriik.eesti.ee](https://digiriik.eesti.ee/)
+på norsk — prosessen og verktøykassen er dekket i sin helhet, mens noen
+sideseksjoner på originalen ennå ikke er tilpasset:
 
 - ✅ Alle 7 fasene, riktig rekkefølge og navn
-- ✅ Ett nøkkelspørsmål og 2–4 stikkords-verktøy per fase (skrevet av oss)
-- ✅ 7 av originalens ~25 navngitte verktøy, forklart i ett avsnitt hver
+- ✅ Alle 33 underartikler (fase-for-fase-innholdet), gjenfortalt på norsk — ikke maskinoversatt, og Estland-spesifikk administrasjon (skjemanavn, kontaktpunkter) er kuttet
+- ✅ Alle 25 verktøy i verktøybiblioteket, inkludert de 5 icebreaker-øvelsene
 - ✅ Norske ressurskoblinger per fase (finnes ikke i originalen)
-- ❌ De ~25–35 fyldige underartiklene originalen har (én per fase-steg)
-- ❌ De resterende ~18 verktøyene i originalens eget verktøybibliotek
 - ❌ Seksjonene *Riiklikud juhised*, *Artiklid*, *Teatmik*, *Koostoimeraamistik* og *Riigi IT-majad* fra originalen
 
 Se [issue #1](https://github.com/FinnurO/tjenestedesign-no/issues/1) for
