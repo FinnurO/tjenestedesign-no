@@ -23,7 +23,9 @@ body{
 img{ max-width:100%; display:block; }
 [hidden]{ display:none !important; }
 
-a:not(.ds-button){ color: var(--ds-color-accent-text-default); }
+a:not(.ds-button):not(.ds-tag){ color: var(--ds-color-accent-text-default); }
+a.ds-tag{ text-decoration:none; cursor:pointer; }
+a.ds-tag:hover{ background: var(--ds-color-surface-hover); }
 a.plain{ color:inherit; text-decoration:none; }
 
 ::selection{ background: var(--ds-color-accent-surface-tinted); color: var(--ds-color-accent-text-default); }
