@@ -23,7 +23,7 @@ body{
 img{ max-width:100%; display:block; }
 [hidden]{ display:none !important; }
 
-a{ color: var(--ds-color-accent-text-default); }
+a:not(.ds-button){ color: var(--ds-color-accent-text-default); }
 a.plain{ color:inherit; text-decoration:none; }
 
 ::selection{ background: var(--ds-color-accent-surface-tinted); color: var(--ds-color-accent-text-default); }
