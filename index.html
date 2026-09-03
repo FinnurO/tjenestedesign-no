@@ -192,6 +192,27 @@
   </div>
 </footer>
 
+<button type="button" class="ds-button feedback-fab" data-color="accent" id="feedback-open-btn" aria-haspopup="dialog">
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+  <span class="btn-label">Gi tilbakemelding</span>
+</button>
+
+<dialog class="feedback-dialog" id="feedback-dialog" aria-labelledby="feedback-dialog-title">
+  <div class="feedback-dialog__body">
+    <h2 id="feedback-dialog-title">Gi tilbakemelding</h2>
+    <p class="lead">Sendes som et innspill på GitHub — du logger inn med (eller oppretter) en gratis GitHub-konto for å fullføre innsendingen der.</p>
+    <div class="feedback-context" id="feedback-context"></div>
+    <div class="feedback-field">
+      <label for="feedback-text">Hva vil du si noe om?</label>
+      <textarea id="feedback-text" placeholder="Skriv tilbakemeldingen din her …"></textarea>
+    </div>
+    <div class="feedback-actions">
+      <button type="button" class="ds-button" data-variant="tertiary" data-color="neutral" id="feedback-cancel-btn">Avbryt</button>
+      <button type="button" class="ds-button" data-color="accent" id="feedback-submit-btn">Send inn på GitHub →</button>
+    </div>
+  </div>
+</dialog>
+
 <script>
 (function(){
   // --- Bridge Artifact-/nettleser-tema til designsystemet sitt data-color-scheme ---
@@ -202,6 +223,70 @@
   }
   syncScheme();
   new MutationObserver(syncScheme).observe(root, { attributes:true, attributeFilter:['data-theme'] });
+
+  // --- Tilbakemelding: åpner GitHub sitt "nytt issue"-skjema, forhåndsutfylt med kontekst ---
+  var fbOpenBtn = document.getElementById('feedback-open-btn');
+  var fbDialog = document.getElementById('feedback-dialog');
+  if(fbOpenBtn && fbDialog && typeof fbDialog.showModal === 'function'){
+    var fbCancelBtn = document.getElementById('feedback-cancel-btn');
+    var fbSubmitBtn = document.getElementById('feedback-submit-btn');
+    var fbTextEl = document.getElementById('feedback-text');
+    var fbCtxEl = document.getElementById('feedback-context');
+    var fbPendingSelection = '';
+
+    function fbGatherContext(){
+      var openSections = Array.prototype.slice.call(document.querySelectorAll('main details[open] > summary'))
+        .map(function(s){
+          var title = s.querySelector('.s-title');
+          var text = title ? title.textContent : s.textContent;
+          return text.trim().replace(/\s+/g,' ');
+        })
+        .filter(Boolean);
+      return { url: location.href, title: document.title, openSections: openSections, selection: fbPendingSelection };
+    }
+
+    function fbEsc(s){
+      var d = document.createElement('div'); d.textContent = s; return d.innerHTML;
+    }
+
+    function fbRenderContext(ctx){
+      var lines = ['<div><strong>Side:</strong> ' + fbEsc(ctx.title) + '</div>'];
+      if(ctx.openSections.length){
+        lines.push('<div><strong>Åpne seksjoner:</strong> ' + fbEsc(ctx.openSections.slice(0,4).join(' › ')) + '</div>');
+      }
+      if(ctx.selection){
+        var sel = ctx.selection.length > 200 ? ctx.selection.slice(0,200) + '…' : ctx.selection;
+        lines.push('<div><strong>Merket tekst:</strong> «' + fbEsc(sel) + '»</div>');
+      }
+      fbCtxEl.innerHTML = lines.join('');
+    }
+
+    fbOpenBtn.addEventListener('click', function(){
+      var sel = window.getSelection ? window.getSelection().toString().trim() : '';
+      fbPendingSelection = sel;
+      fbRenderContext(fbGatherContext());
+      fbTextEl.value = '';
+      fbDialog.showModal();
+      fbTextEl.focus();
+    });
+    fbCancelBtn.addEventListener('click', function(){ fbDialog.close(); });
+    fbDialog.addEventListener('click', function(e){ if(e.target === fbDialog) fbDialog.close(); });
+    fbDialog.addEventListener('cancel', function(){});
+    fbSubmitBtn.addEventListener('click', function(){
+      var ctx = fbGatherContext();
+      var body = '**Side:** ' + ctx.url + '\n';
+      if(ctx.openSections.length){ body += '**Åpne seksjoner:** ' + ctx.openSections.join(' › ') + '\n'; }
+      if(ctx.selection){ body += '**Merket tekst:**\n> ' + ctx.selection.replace(/\n/g,'\n> ') + '\n'; }
+      body += '\n---\n\n' + (fbTextEl.value.trim() || '_(ingen tekst skrevet inn)_');
+      var title = 'Tilbakemelding: ' + ctx.title;
+      var issueUrl = 'https://github.com/FinnurO/tjenestedesign-no/issues/new'
+        + '?title=' + encodeURIComponent(title)
+        + '&body=' + encodeURIComponent(body)
+        + '&labels=' + encodeURIComponent('tilbakemelding');
+      window.open(issueUrl, '_blank', 'noopener');
+      fbDialog.close();
+    });
+  }
 })();
 </script>
 </body>

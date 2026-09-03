@@ -214,3 +214,19 @@ table.ds-table caption{ text-align:left; font-size: var(--ds-body-sm-font-size);
 
 .skip-to-content{ position:absolute; left:-999px; top:auto; }
 .skip-to-content:focus{ position:fixed; left:1rem; top:1rem; z-index:100; }
+
+/* ---------- Tilbakemeldingsknapp og -dialog ---------- */
+.feedback-fab{ position:fixed; right:var(--ds-size-6); bottom:var(--ds-size-6); z-index:50; box-shadow:0 4px 16px rgba(0,0,0,.18); }
+@media (max-width:640px){ .feedback-fab{ right:var(--ds-size-4); bottom:var(--ds-size-4); } .feedback-fab span.btn-label{ display:none; } }
+.feedback-dialog{ border:none; border-radius:var(--ds-border-radius-lg); padding:0; max-width:34rem; width:calc(100vw - 2rem); background:var(--ds-color-background-default); color:var(--ds-color-text-default); }
+.feedback-dialog::backdrop{ background:rgba(0,0,0,.45); }
+.feedback-dialog__body{ padding:var(--ds-size-6); }
+.feedback-dialog h2{ font-family:var(--site-font-display); font-size:var(--ds-heading-sm-font-size); margin:0 0 var(--ds-size-2); }
+.feedback-dialog p.lead{ margin:0 0 var(--ds-size-5); color:var(--ds-color-text-subtle); font-size:var(--ds-body-sm-font-size); }
+.feedback-field{ display:block; margin-bottom:var(--ds-size-5); }
+.feedback-field label{ display:block; font-size:var(--ds-body-sm-font-size); font-weight:500; margin-bottom:var(--ds-size-2); }
+.feedback-field textarea{ width:100%; min-height:7rem; resize:vertical; font:inherit; font-size:var(--ds-body-sm-font-size); padding:var(--ds-size-3); border:1px solid var(--ds-color-border-default); border-radius:var(--ds-border-radius-md); background:var(--ds-color-background-default); color:var(--ds-color-text-default); box-sizing:border-box; }
+.feedback-field textarea:focus-visible{ outline:3px solid var(--ds-color-focus-outer); outline-offset:1px; }
+.feedback-context{ background:var(--ds-color-surface-tinted); border:1px solid var(--ds-color-border-subtle); border-radius:var(--ds-border-radius-md); padding:var(--ds-size-3) var(--ds-size-4); font-size:var(--ds-body-xs-font-size); color:var(--ds-color-text-subtle); margin-bottom:var(--ds-size-5); display:flex; flex-direction:column; gap:var(--ds-size-1); }
+.feedback-context strong{ color:var(--ds-color-text-default); }
+.feedback-actions{ display:flex; justify-content:flex-end; gap:var(--ds-size-3); flex-wrap:wrap; }
