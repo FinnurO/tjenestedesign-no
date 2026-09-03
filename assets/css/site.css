@@ -163,7 +163,7 @@ table.ds-table caption{ text-align:left; font-size: var(--ds-body-sm-font-size);
 .toolkit-card__top{ display:flex; justify-content:space-between; align-items:flex-start; gap: var(--ds-size-3); }
 .toolkit-card h3{ margin:0; font-size: var(--ds-body-lg-font-size); font-weight:600; }
 .toolkit-card p{ margin:0; color: var(--ds-color-text-subtle); font-size: var(--ds-body-sm-font-size); flex-grow:1; }
-.toolkit-card .meta{ display:flex; gap: var(--ds-size-2); flex-wrap:wrap; font-size: var(--ds-body-xs-font-size); color: var(--ds-color-text-subtle); }
+.meta{ display:flex; gap: var(--ds-size-2); flex-wrap:wrap; font-size: var(--ds-body-xs-font-size); color: var(--ds-color-text-subtle); }
 .toolkit-card.is-disabled{ opacity:.6; }
 
 /* ---------- Verktøykasse-detalj: fase-liste ---------- */
@@ -197,14 +197,15 @@ table.ds-table caption{ text-align:left; font-size: var(--ds-body-sm-font-size);
 /* ---------- Underartikler (nøstet ds-details inni hver fase) ---------- */
 .phase-subarticles{ padding: 0 var(--ds-size-6) var(--ds-size-6); border-top:1px solid var(--ds-color-border-subtle); margin-top: var(--ds-size-5); padding-top: var(--ds-size-5); }
 .phase-subarticles h4{ margin:0 0 var(--ds-size-3); font-size: var(--ds-body-sm-font-size); font-weight:600; text-transform:uppercase; letter-spacing:.03em; color: var(--ds-color-text-subtle); }
-.phase-subarticles-list{ border:1px solid var(--ds-color-border-subtle); border-radius: var(--ds-border-radius-md); overflow:clip; }
-.phase-subarticles-list .ds-details{ border-inline-width:0; }
-.phase-subarticles-list .ds-details:first-child{ border-top-width:0; }
-.phase-subarticles-list .ds-details summary{ font-weight:500; font-size: var(--ds-body-sm-font-size); }
-.phase-subarticles-list .ds-details p{ margin:0 0 var(--ds-size-3); font-size: var(--ds-body-sm-font-size); }
-.phase-subarticles-list .ds-details p:last-child{ margin-bottom: var(--ds-size-4); }
-.phase-subarticles-list .ds-details ul,.phase-subarticles-list .ds-details ol{ margin:0 0 var(--ds-size-4); padding-left:1.1em; font-size: var(--ds-body-sm-font-size); display:flex; flex-direction:column; gap: var(--ds-size-2); }
-.phase-subarticles-list .ds-details ol{ list-style:decimal; }
+.phase-subarticles-list, .tool-details-list{ border:1px solid var(--ds-color-border-subtle); border-radius: var(--ds-border-radius-md); overflow:clip; }
+.phase-subarticles-list .ds-details, .tool-details-list .ds-details{ border-inline-width:0; }
+.phase-subarticles-list .ds-details:first-child, .tool-details-list .ds-details:first-child{ border-top-width:0; }
+.phase-subarticles-list .ds-details summary, .tool-details-list .ds-details summary{ font-weight:500; font-size: var(--ds-body-sm-font-size); }
+.phase-subarticles-list .ds-details p, .tool-details-list .ds-details p{ margin:0 0 var(--ds-size-3); font-size: var(--ds-body-sm-font-size); }
+.phase-subarticles-list .ds-details p:last-child, .tool-details-list .ds-details p:last-child{ margin-bottom: var(--ds-size-4); }
+.phase-subarticles-list .ds-details ul,.phase-subarticles-list .ds-details ol, .tool-details-list .ds-details ul,.tool-details-list .ds-details ol{ margin:0 0 var(--ds-size-4); padding-left:1.1em; font-size: var(--ds-body-sm-font-size); display:flex; flex-direction:column; gap: var(--ds-size-2); }
+.phase-subarticles-list .ds-details ol, .tool-details-list .ds-details ol{ list-style:decimal; }
+.tool-details-list .meta{ font-weight:500; }
 
 .view{ }
 .view[hidden]{ display:none; }
