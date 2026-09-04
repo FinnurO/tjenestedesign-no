@@ -1,0 +1,27 @@
+name: Deploy til produksjon
+
+on:
+  push:
+    branches:
+      - main
+
+# Unngå at to produksjonsdeploy kjører samtidig og krasjer i hverandre
+concurrency:
+  group: production-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Nettstedet er allerede ferdig statisk HTML/CSS/JS i repo-roten —
+      # ingen bygg-steg nødvendig, bare kopier innholdet til gh-pages.
+      - uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: .
+          branch: gh-pages
+          # Ikke rør aktive PR-forhåndsvisninger når produksjon deployes
+          clean-exclude: pr-preview/
+          force: false
