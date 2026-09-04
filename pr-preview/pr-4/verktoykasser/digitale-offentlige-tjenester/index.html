@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verktøykasse for digitale offentlige tjenester</title>
+<meta name="description" content="Sju faser for å designe digitale offentlige tjenester, gjenfortalt på norsk fra Estlands digiriik.eesti.ee — alle underartikler og verktøy, med norske ressurser i hver fase.">
+<link rel="canonical" href="https://finnuro.github.io/tjenestedesign-no/verktoykasser/digitale-offentlige-tjenester/">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/css/fonts.css">
+<link rel="stylesheet" href="../../assets/css/vendor/designsystemet.css">
+<link rel="stylesheet" href="../../assets/css/vendor/designsystemet-theme.css">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<meta property="og:title" content="Verktøykasse for digitale offentlige tjenester">
+<meta property="og:description" content="Sju faser for å designe digitale offentlige tjenester, gjenfortalt på norsk fra Estlands digiriik.eesti.ee — alle underartikler og verktøy, med norske ressurser i hver fase.">
+<meta property="og:type" content="website">
+</head>
+<body>
+
+<a class="ds-link skip-to-content" href="#main">Hopp til innhold</a>
+
+<div class="disclaimer-bar">
+  <div class="wrap">
+    <span>📎 <strong>Uoffisiell norsk bearbeiding</strong> av OECD OPSI sin veileder <em>Service Design</em>, <strong>laget utelukkende av KI-agenter</strong> — ikke en offisiell Digdir- eller OECD-tjeneste.</span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand plain" href="../../">
+      <span class="brand__mark" aria-hidden="true">TD</span>
+      <span class="brand__text">
+        <span class="brand__title">Tjenestedesign i offentlig sektor</span>
+        <span class="brand__subtitle">Norsk bearbeiding av OECD OPSI</span>
+      </span>
+    </a>
+    <nav class="main-nav" aria-label="Hovedmeny">
+      <a href="../../">Forside</a>
+      <a href="../../guide/">Guide</a>
+      <a href="../../verktoykasser/">Verktøykasser</a>
+      <a href="../../verktoykasser/digitale-offentlige-tjenester/" aria-current="page">Digital verktøykasse</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap page-head">
+    <span style="font-size:var(--ds-body-xs-font-size); color:var(--ds-color-text-subtle);"><a class="ds-link" href="../../">Forside</a> / <a class="ds-link" href="../../verktoykasser/">Verktøykasser</a> / Digital verktøykasse</span>
+    <h1>Verktøykasse for å designe digitale offentlige tjenester</h1>
+    <p class="lead">Sju faser som følger en digital tjeneste fra forberedelse til erfaringsdeling — med et utvalg av de opprinnelige verktøyene, og en norsk ressurs lagt til i hver fase.</p>
+  </div>
+
+  <div class="wrap" style="padding-block: var(--ds-size-6) 0;">
+    <div class="ds-alert" data-color="info">
+      <div class="attribution-box">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+        <p style="margin:0; font-size:var(--ds-body-sm-font-size);">
+          Opprinnelig utviklet av <strong>Estlands Kommunikasjons- og økonomidepartement</strong> (2022) som <em>digiriik.eesti.ee</em>, og kuratert av
+          <a class="ds-link" href="https://oecd-opsi.org/toolkits/toolbox-for-designing-digital-public-services/" target="_blank" rel="noopener">OECD OPSI sin Toolkit Navigator</a>.
+          Boksene merket <strong>🇳🇴 Norsk ressurs</strong> er lagt til av oss og finnes ikke i originalen.
+        </p>
+      </div>
+    </div>
+
+    <div class="ds-alert" data-color="warning" style="margin-top:var(--ds-size-3);">
+      <div class="attribution-box">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+        <p style="margin:0; font-size:var(--ds-body-sm-font-size);">
+          <strong>Om omfanget:</strong> alle 25 verktøyene i originalens verktøybibliotek er oversatt (se «Metodebibliotek» og «Verktøy i detalj» nedenfor), og alle 34 underartikler for de sju fasene er gjenfortalt på norsk. Originalens øvrige seksjoner — nasjonale retningslinjer, samvirkerammeverk og artikler — er erstattet med norske motstykker i guiden under <a class="ds-link" href="../../guide/#nasjonale-standarder">«Nasjonale standarder og samvirke»</a>, fremfor å oversettes direkte. Estlands eneste seksjon uten norsk motstykke, statens IT-hus, er utelatt. Se
+          <a class="ds-link" href="https://github.com/FinnurO/tjenestedesign-no/issues/1" target="_blank" rel="noopener">fremdriftsplanen på GitHub</a> for hva som gjenstår.
+        </p>
+      </div>
+    </div>
+
+    <div style="display:flex; gap:var(--ds-size-2); flex-wrap:wrap; margin-top:var(--ds-size-6);">
+      <span class="ds-tag" data-color="neutral">Opphav: Estland</span>
+      <span class="ds-tag" data-color="neutral">Publisert: 2022</span>
+      <span class="ds-tag" data-color="neutral">Lisens: CC0 / offentlig eiendom</span>
+      <span class="ds-tag" data-color="neutral">Type: Metodebibliotek</span>
+      <span class="ds-tag" data-color="accent">Norsk bearbeiding: 2026</span>
+    </div>
+
+    <div class="phase-list">
+    <details class="phase" open>
+      <summary><span><span class="s-title">Forberedelse</span><span class="s-q">Hvordan forbereder vi oss på tjenesteutvikling, og hvem trenger vi med på laget?</span></span><svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></summary>
+      <div class="phase-body">
+        <div>
+          <h4>Verktøy i denne fasen</h4>
+          <ul>
+            <li>Kartlegging av tverrfaglig team (fag, jus, IT, kommunikasjon)</li>
+            <li>Interessentanalyse</li>
+            <li>Enkelt prosjektmandat med formål og avgrensning</li>
+          </ul>
+        </div>
+        <div class="no-callout">
+          <h4>🇳🇴 Norsk ressurs</h4>
+          <p>Bruk <strong>Prosjektveiviseren</strong> til å strukturere tidligfasen og roller.</p>
+          <p>Vurder om utfordringen egner seg for støtte fra <strong>Stimulab</strong> — spesielt hvis den krysser flere virksomheter, eller er en reell <a href="https://www.digdir.no/stimulab/missions-en-ny-retning-samfunnsfloker/3072" target="_blank" rel="noopener">samfunnsfloke</a> (mission) flere sektorer må løse sammen.</p>
+        </div>
+      </div>
+      <div class="phase-subarticles">
+        <h4>Underartikler fra originalen — gjenfortalt på norsk</h4>
+        <div class="phase-subarticles-list">
+          <details class="ds-details">
+            <summary>Tjenesteeierrollen</summary>
+            <div>
+              <p>En tjenesteeier er ikke nødvendigvis en tradisjonell prosjektleder, men den som har det interne forvalteransvaret: sikrer at brukernes behov er kartlagt, at tjenesten henger sammen med virksomhetens og samfunnets digitale strategi, og at det finnes en tydelig visjon for hvor tjenesten skal.</p>
+              <p>Gode tjenesteeiere er gjerne engasjerte, samlende, beslutningsdyktige, nysgjerrige, fleksible, ærlige («design som om du har rett, lytt som om du tar feil») og rettferdige.</p>
+              <p>Skill mellom prosjekt og tjeneste: et prosjekt har start og slutt, en tjeneste lever videre. Flere prosjekter kan høre til samme tjeneste over tid — tjenesteeieren har ansvaret på tvers av dem.</p>
+            </div>
+          </details>
+          <details class="ds-details">
+            <summary>Sette prosjektmål</summary>
+            <div>
+              <p>Målet er en tydelig, skriftlig forståelse av hvorfor endringen skal gjennomføres, og hvordan dere vil vite at den har lyktes. Spør: hvor begynner prosjektet, og hvor slutter det? Vanlige utgangspunkt er et oversett problem, behov for å fornye en eksisterende tjeneste, ønske om å digitalisere en prosess, eller behov for å redusere kostnader.</p>
+              <p>Bruk gjerne en problemformulering med tre deler: målgruppen, selve problemet, og situasjonen det oppstår i. Bestem hvordan dere skal måle suksess <em>før</em> dere går videre — endres antall henvendelser, er resultatet målbart i kroner, reduseres arbeidsmengden for bestemte ansatte?</p>
+              <p>Husk at målene bør revideres underveis — ny innsikt kan endre hva som er riktig mål. Neste steg: skriv formål og hovedmålinger i én til to setninger.</p>
+            </div>
+          </details>
+          <details class="ds-details">
+            <summary>Velge team</summary>
+            <div>
+              <p>Mål: et motivert, tverrfaglig team som faktisk bryr seg om at tjenesten lykkes. Ikke alle trenger å være med i alle beslutninger — men de rette folkene bør bidra på rett tidspunkt.</p>
+              <p>Typiske roller fra idé til gjennomføring: tjenesteeier, en som leder brukerinnsikt, en designer (ofte ekstern, lager prototyper), en jurist. Internt bør dere i tillegg ha noen som skriver klart for brukerne, og en utvikler som kan varsle tidlig om tekniske utfordringer. Eksterne eksperter bidrar med spisskompetanse, men mangler deres organisasjons kontekst — ikke gi fra dere hele ansvaret.</p>
+              <p>Enkel ansvarsmodell: sponsor (leder som gir mandat og ryggdekning), tjenesteeier (holder tråden), kjerneteam (utfører og er ansvarlige for resultatet), utvidet team (fageksperter på definerte områder) og ledelsen (tar endelige beslutninger, støtter kjerneteamet).</p>
+              <p>Vurder om hele teamet bør delta i alle designbeslutninger, eller om en mindre designgruppe gir bedre resultater — for mange stemmer i designarbeid kan svekke sluttresultatet. Egne arbeidsgrupper kan være verdt å vurdere for: målgrupper/personas, visuell utforming, brukervennlighet/tilgjengelighet, innhold/tekst, valg av teknologi, juss/regelverk, og informasjonssikkerhet/personvern.</p>
+            </div>
+          </details>
+          <details class="ds-details">
+            <summary>Start! — få teamet i gang</summary>
+            <div>
+              <p>Mål: at teamet vil jobbe sammen og kjenner et reelt lagfellesskap. Fire ting bør på plass tidlig:</p>
+              <ul>
+                <li><strong>Retning</strong> — felles forståelse av oppdraget og hva suksess betyr, og at hvert medlem forstår sitt eget «hvorfor meg?».</li>
+                <li><strong>Tillit</strong> — del hvem dere er, hvilke styrker dere har, hvordan dere helst jobber, og hva dere <em>ikke</em> forventer av hverandre.</li>
+                <li><strong>Tydelige mål</strong> — diskuter antakelser, forventninger og begrensninger sammen, og sett konkrete suksesskriterier.</li>
+                <li><strong>Forpliktelse</strong> — lag veikartet sammen som team: arbeidsprinsipper, beslutningsprosess, rollefordeling, ressursbehov.</li>
+              </ul>
+              <p>Tips: bruk <strong>IDOARRT</strong> — et enkelt rammeverk for å sette retning og mål på møter helt fra start — når dere planlegger workshops.</p>
+            </div>
+          </details>
+          <details class="ds-details">
+            <summary>Ressursplanlegging</summary>
+            <div>
+              <p>Er ikke totalbudsjettet fastsatt fra start: planlegg og kostnadsberegn trinnvis. Resultater fra én fase bør informere budsjetteringen av neste — det reduserer risikoen for at prosjektet strander fordi utviklingsbehovet ble undervurdert.</p>
+              <p>Vanlig fallgruve: nye team begynner med å planlegge selve IT-utviklingen. Ikke gjør det — hva utviklingen faktisk krever, blir først tydelig i løsningsfasen. Del gjerne utviklingen i etapper, men kun hvis hver etappe gir en komplett, brukbar leveranse.</p>
+              <p>Er brukersentrert design dyrt? Ikke nødvendigvis — jo mindre budsjett, desto større bør teamets egen innsats være. Eksempel på tre kostnadsnivåer: behovskartlegging som etnografi (dyrt), intervjuer (middels) eller kollegavurdering (billig); prototyping som HTML (dyrt), klikkbar prototype (middels) eller papirskisse (billig); validering som brukertesting (dyrt), hurtigtest (middels) eller uformell testing i det offentlige rom (billig).</p>
+            </div>
+          </details>
+          <details class="ds-details">
+            <summary>De ti bud for gode digitale tjenester</summary>
+            <div>
+              <p>Estland har formulert ti prinsipper for digitale tjenester i offentlig sektor — et godt utgangspunkt for en tilsvarende samtale i eget team, uansett land:</p>
+              <ol>
+                <li><strong>Finn det reelle brukerproblemet.</strong> Anta ikke at dere allerede vet hva problemet er — undersøk først, med ekte brukere.</li>
+                <li><strong>Sett sammen et tverrfaglig team.</strong> Variert kompetanse og en endringsvillig holdning fanger opp juridiske, tekniske og brukervennlighetshensyn tidlig, før de blir dyre å rette opp.</li>
+                <li><strong>Utforsk og test flere løsninger.</strong> Sammenlign alternative løsningsvarianter og idéer — den beste løsningen blir tydelig gjennom testing med ekte brukere, ikke gjennom antakelser på et møterom.</li>
+                <li><strong>Ta høyde for fremtiden.</strong> Vurder fremvoksende teknologi og bredere samfunnstrender, slik at løsningen dere lager fortsatt er relevant om noen år.</li>
+                <li><strong>Lag enkle, nødvendige tjenester.</strong> Design intuitive tjenester som løser reelle problemer — ikke gjenskap gammel papirlogikk digitalt, og følg prinsippet om at brukeren bare skal oppgi informasjon én gang.</li>
+                <li><strong>Samskap med de berørte.</strong> Involver brukere, andre virksomheter og sivilsamfunnet tidlig — det reduserer fragmenterte løsninger og unngår at flere bygger det samme uavhengig av hverandre.</li>
+                <li><strong>Sikre samvirke og gjenbruk.</strong> Følg etablerte samvirkerammeverk, gjenbruk eksisterende løsninger fremfor å bygge nytt, og gjør egen kode og egne data tilgjengelig for andre der det er mulig.</li>
+                <li><strong>Jobb smidig.</strong> Gradvis fremgang, i korte sykluser, gir handlingsrom til å justere kursen basert på det dere faktisk lærer underveis.</li>
+                <li><strong>Ivareta sikkerhet og åpenhet.</strong> Beskytt personvernet, gjennomfør risikovurderinger gjennom hele tjenestens levetid — ikke bare ved lansering — og oppretthold folks tillit til at data behandles ansvarlig.</li>
+                <li><strong>Forvalt tjenesten aktivt.</strong> Utpek en tydelig eier, sett målbare mål, følg med på faktisk bruk, og ta forvaltningsbeslutninger basert på data — tjenesteforvaltning stopper ikke ved lansering.</li>
+              </ol>
+            </div>
+          </details>
+          <details class="ds-details">
+            <summary>Risikovurdering</summary>
+            <div>
+              <p>Risikovurdering bør dekke: juridisk risiko (endringer i lov/forskrift), organisatorisk risiko (endrede strategier), risiko for teknisk/funksjonell svikt ved lansering, og brukervennlighetsrisiko — delt i om brukeren <em>forstår</em> tjenesten og om tjenesten <em>matcher</em> brukerens forventninger og vaner. Sistnevnte er ofte vanskeligst å fange opp på forhånd.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </details>
+
+    <details class="phase">
+      <summary><span><span class="s-title">Forstå og velge fokus</span><span class="s-q">Hvilket problem skal vi faktisk løse, for hvem, og hvor bør vi starte?</span></span><svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></summary>
+      <div class="phase-body">
+        <div>
+          <h4>Verktøy i denne fasen</h4>
+          <ul>
+            <li>Kvalitative brukerintervjuer og observasjon</li>
+            <li>Personas</li>
+            <li>Problemformulering («hvordan kan vi …»)</li>
+            <li>Prioritering av innsatsområde</li>
+          </ul>
+        </div>
+        <div class="no-callout">
+          <h4>🇳🇴 Norsk ressurs</h4>
+          <p>Sjekk om problemet allerede er dekket av en av de <strong>sju prioriterte livshendelsene</strong> — da finnes det ofte innsikt og et tverretatlig miljø fra før.</p>
+          <p><a href="https://arbeidsgiver.dfo.no/ressurser-og-verktoy/lede-prosesser-og-moter/involvere-utforske-og-prioritere/brukerinvolvering" target="_blank" rel="noopener">DFØ sin veileder om brukerinvolvering</a> går gjennom brukerintervju, brukerreise og persona som tre konkrete metoder, med tidsbruk og fremgangsmåte.</p>
+          <p>Bygger du personas: se Digdirs <a href="https://www.digdir.no/klart-sprak/brukergrupper/4658" target="_blank" rel="noopener">seks digitalt sårbare brukergrupper</a> og <a href="https://designsystemet.no/no/best-practices/user-insight/user-groups-that-are-digitally-vulnerable/" target="_blank" rel="noopener">designsystemet.no sin beste praksis for dem</a>, eller bruk <a href="https://www.distriktssenteret.no/verktoy/personas" target="_blank" rel="noopener">Distriktssenterets persona-mal</a> (Word/ODT) som utgangspunkt.</p>
+          <p>Skal tjenesten bygges i Altinn Studio: se plattformens egen <a href="https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/insight/" target="_blank" rel="noopener">veiledning for innsiktsfasen</a>.</p>
+        </div>
+      </div>
+      <div class="phase-subarticles">
+        <h4>Underartikler fra originalen — gjenfortalt på norsk</h4>
+        <div class="phase-subarticles-list">
+          <details class="ds-details">
+            <summary>Kartlegge dagens prosesser (AS-IS)</summary>
+            <div>
+              <p>Mål: godt nok grunnlag til å skrive et solid utkast til kravspesifikasjon, gjennom å forstå situasjonen slik den er i dag. AS-IS er situasjonen nå, TO-BE er den ønskede fremtidige løsningen.</p>
+              <p>Bruk gjerne et «isfjell»-perspektiv med fire nivåer — det synlige problemet er ofte bare toppen: hendelsesnivå (enkelthendelser slik de oppleves), mønsternivå (når og hvor svikter tjenesten gjentatte ganger?), strukturnivå (hva forårsaker mønstrene?) og mentalt nivå (hvilke antakelser og holdninger opprettholder situasjonen?).</p>
+              <p>Praktiske steg: (1) samle og oppsummer eksisterende kunnskap — analyser, veiledere, statistikk, (2) kartlegg interessenter — hvem leverer inn, hvem mottar resultatet, hvilke fagsystemer er involvert, (3) forbered brukerintervjuer — velg inntil tre hovedgrupper, (4) gjennomfør minst fem intervjuer, (5) utvikle personas fra funnene — prioriter de 20 % av brukeraktivitetene som er både hyppigst og vanskeligst, (6) kartlegg brukerreisen steg for steg, med tidsbruk og årsak til eventuell venting, (7) kartlegg selve saksbehandlingsflyten internt, (8) avklar regelverket — skyldes tregheter loven, eller bare intern praksis?</p>
+            </div>
+          </details>
+          <details class="ds-details">
+            <summary>Utarbeide kravspesifikasjon (designbrief)</summary>
+            <div>
+              <p>Mål: samle grunnlagsinformasjonen i ett dokument som beskriver <em>problemet</em>, ikke løsningen — både som utgangspunkt for designarbeidet og som underlag om dere senere skal anskaffe eksterne tjenester.</p>
+              <p>Foreslått struktur: sammendrag (problem, målgruppens størrelse, nøkkeltall, mål, hvem som bestiller) → kort om egen virksomhet → beskrivelse av situasjonen (hva løses, hvorfor det er viktig, dagens flaskehalser, juridiske/tekniske hensyn, statistikk) → mål (ønsket endring, brukerbehov fra intervjuer/personas, målbare suksesskriterier) → tidligere arbeid (kost/nytte, risiko) → vedlegg (undersøkelser, visuell inspirasjon).</p>
+              <p>Tre tommelfingerregler: beskriv problemet — ikke foreslå løsningen; ikke anta — skriv ned alt dere faktisk vet; hold dokumentet levende — oppdater det når dere lærer mer. Utpek gjerne én redaktør som holder dokumentet samlet, selv om hele teamet bidrar.</p>
+            </div>
+          </details>
+          <details class="ds-details">
+            <summary>Tilbakemelding i teamet</summary>
+            <div>
+              <p>Etter en intensiv fase med mange møter og mye produsert materiale: sett av tid til å se på hvordan samarbeidet faktisk fungerer, og gi hverandre tilbakemelding. To konkrete metoder å bruke: AIR-tilbakemeldingsmodellen, og «Start, Stop, Continue» — hva bør vi starte med, slutte med, og fortsette med?</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </details>
+
+    <details class="phase">
+      <summary><span><span class="s-title">Løse</span><span class="s-q">Hvilke ideer er levedyktige, og hvor trengs det mer utviklingsarbeid?</span></span><svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></summary>
+      <div class="phase-body">
+        <div>
+          <h4>Verktøy i denne fasen</h4>
+          <ul>
+            <li>Idémyldring på tvers av fag</li>
+            <li>Kanvas for offentlig tjenesteutvikling</li>
+            <li>Grovsortering og konseptutvikling</li>
+          </ul>
+        </div>
+        <div class="no-callout">
+          <h4>🇳🇴 Norsk ressurs</h4>
+          <p>Involver reelle brukere og førstelinjen i samskaping — en forutsetning for støtte fra <strong>Stimulab</strong>, og god praksis uansett finansiering.</p>
+        </div>
+      </div>
+      <div class="phase-subarticles">
+        <h4>Underartikler fra originalen — gjenfortalt på norsk</h4>
+        <div class="phase-subarticles-list">
+          <details class="ds-details">
+            <summary>Snakke med berørte parter</summary>
+            <div>
+              <p>Mål: redusere risiko, støtte en vellykket utvikling, og skape synergier med eksisterende løsninger. Dere har allerede kartlagt hvem tjenesten berører (registre, andre tjenester) — nå er tiden inne for å ta kontakt og avtale et planavklaringsmøte.</p>
+              <p>Steg: innkall til møte(r) med de berørte partene → presenter arbeidet og designgrunnlaget teamet har gjort så langt → gi alle berørte parter mulighet til å komme med tilbakemelding → presiser dokumenter og underlag ved behov → få de nødvendige avtalene på plass.</p>
+            </div>
+          </details>
+          <details class="ds-details">
+            <summary>Idémyldringsverksted</summary>
+            <div>
+              <p>Mål: sikre at ingen gode idéer går tapt fordi de er uvante eller mangler et sted å bli delt. Kjør et idémyldringsverksted med teamet, gjerne med Hull 8/Crazy 8s som metode.</p>
+              <p>Alternativ ved fastlåst tenkning: «verst tenkelige idé» — hver deltaker skriver ned de verste (dyreste, mest ineffektive, mest urealistiske) ideene de kan komme på, teamet velger ut tre, og utvikler i fellesskap hvordan de kan snus til noe faktisk brukbart. Bra for å friske opp tenkningen når dere står fast. Velg til slutt ut 2–3 av de beste ideene å jobbe videre med.</p>
+            </div>
+          </details>
+          <details class="ds-details">
+            <summary>Personvern- og regelverksavklaringer</summary>
+            <div>
+              <p>Mål: sikre at tjenesten kan realisere sitt fulle potensial, uten at juridisk usikkerhet forsinker utviklingen senere. Samle en arbeidsgruppe (evt. med jurist/personvernombud) og avklar: hvilke lover og forskrifter gjelder? Hvilke krav til universell utforming gjelder? Hvilket rettslig grunnlag finnes for å bruke eksisterende data eller koble til andre virksomheters registre? Hva kreves på kort sikt kontra om fem år?</p>
+              <p>Legg spesielt merke til situasjoner der regelverket selv bør endres — meld dette til riktig eier eller virksomhetens juridiske avdeling. Kom tilbake til dette steget når de første idéene er klare, det må valideres flere ganger underveis. Bruker tjenesten KI, involver fageksperter tidlig.</p>
+            </div>
+          </details>
+          <details class="ds-details">
+            <summary>Beskrive ønsket tjeneste</summary>
+            <div>
+              <p>Mål: velge det beste løsningsalternativet, og dokumentere tydelig hva dere forventer av den nye eller endrede tjenesten. Vurder hver idé mot minst fire kriterier: hvor godt den møter brukernes forventninger, hva som må endres i organisering/teknikk/regelverk, om endringene er realistiske å gjennomføre, og om de forventede gevinstene faktisk vil inntreffe.</p>
+              <p>Før dere går videre, bør hele teamet kunne svare tydelig på: hvilket problem løser vi, hva forårsaket situasjonen, hva er suksesskriteriene, hvem lager vi løsningen for og hvilket behov dekker vi, hva er visjonen, hvilken verdi skaper den, og hvilke ressurser/begrensninger har vi? Skriv svarene kort og presist ned.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </details>
+
+    <details class="phase">
+      <summary><span><span class="s-title">Teste løsningen</span><span class="s-q">Henger tjenesten logisk sammen, og er den brukbar for målgruppen?</span></span><svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></summary>
+      <div class="phase-body">
+        <div>
+          <h4>Verktøy i denne fasen</h4>
+          <ul>
+            <li>Brukerreise / tjenestereise</li>
+            <li>Tjenesteblueprint</li>
+            <li>Prototyping (papir til klikkbart)</li>
+            <li>Brukbarhetstesting</li>
+          </ul>
+        </div>
+        <div class="no-callout">
+          <h4>🇳🇴 Norsk ressurs</h4>
+          <p>Test allerede nå mot <strong>WCAG-kravene</strong> — <a href="https://www.uutilsynet.no/" target="_blank" rel="noopener">Tilsynet for universell utforming av ikt</a> har sjekklister du kan bruke direkte på prototypen.</p>
+          <p>Krysser tjenesten flere virksomheter? Digdirs <a href="https://www.digdir.no/digital-samhandling/kart-tjenestekjeder/4168" target="_blank" rel="noopener">kart for tjenestekjeder</a> supplerer tjenesteblueprinten med hvilke hendelser, tjenester og data som utløses hos hvem — og hvor det butter mot regelverk eller autentisering.</p>
+          <p>Skal tjenesten bygges i Altinn Studio: bruk plattformens eget <a href="https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/prototype/" target="_blank" rel="noopener">Prototype-kit</a> for en klikkbar prototype, og se veiledningen for <a href="https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/usertest/" target="_blank" rel="noopener">brukertesting</a>.</p>
+        </div>
+      </div>
+      <div class="phase-subarticles">
+        <h4>Underartikler fra originalen — gjenfortalt på norsk</h4>
+        <div class="phase-subarticles-list">
+          <details class="ds-details">
+            <summary>Brukerreiser (TO-BE) og prototype</summary>
+            <div>
+              <p>Mål: validere at løsningen faktisk møter brukernes reelle behov — ikke bare antatte behov. Prototypen trenger ikke være vakker, den må være brukbar og gi svar. Kartlegg brukerens steg gjennom tjenesten, og lag en prototype av dem. Vær nøye med begrepsbruk og tekst — er den forståelig, kan den forenkles, er den konsekvent, er tonen vennlig? Papir, Miro eller Figma er alle gode verktøy — bruk gjerne komponenter fra et etablert designsystem.</p>
+              <p>Seks kjennetegn på en god prototype: konsistens (samme mønstre og navngivning gjennom hele løsningen), tilgjengelighet (kontrast, skjermleser-støtte, WCAG), gjenoppretting (bekreftelsesdialoger, angre-funksjoner, tydelige feilmeldinger), hukommelse (ikke krev at brukeren husker for mye), effektivitet (kort navigasjon, autoutfylling, autolagring), og språk (ingen intern sjargong, forklarte forkortelser, klart språk).</p>
+            </div>
+          </details>
+          <details class="ds-details">
+            <summary>Brukertesting</summary>
+            <div>
+              <p>Mål: validere om forståelsen dere har av brukeropplevelsen faktisk stemmer med hvordan brukerne selv opplever den. Fokuser på vanlige scenarioer, men ta med noen ytterpunkter. Formuler oppgavene konkret, uten å avsløre detaljer om prototypen eller stille ledende spørsmål.</p>
+              <p>Universell utforming kan ikke legges til billig i etterkant — den må være et designmål fra start, og testes med ekte brukere, ikke bare simuleres. Foretrekk en klikkbar prototype; alternativt «Trollmannen fra Oz»-testing der fasilitator manuelt viser fram grensesnittets respons. Seks steg for testing i det offentlige rom: hils og introduser → rekrutter deltakere (10–15 min) → still filterspørsmål → gjennomfør testen → takk deltakeren → analyser og valider/avkreft hypotesene.</p>
+            </div>
+          </details>
+          <details class="ds-details">
+            <summary>Dokumentasjon</summary>
+            <div>
+              <p>Mål: sikre åpenhet og en felles forståelse i teamet, og unngå misforståelser når utviklingsfasen starter. Skriv heller ned for mye enn for lite — godt dokumenterte prosjekter har lavere risiko for forsinkelser. Bruk delte samarbeidsverktøy, og del dokumentasjonen med alle involverte tidlig.</p>
+              <p>Bør dekke: prosjektbeskrivelse, problemdefinisjon, mål og målinger, hva som er innenfor/utenfor omfang, nøkkelkontakter, risikoer, møtereferater, og validerte hypoteser fra brukertesting — pluss en funksjonell beskrivelse (brukerreiser, feilpunkter, innholdsmodell) og en teknisk beskrivelse (arkitektur, infrastruktur, datamodell, integrasjoner, ytelseskrav).</p>
+            </div>
+          </details>
+          <details class="ds-details">
+            <summary>Pilotprosjekt</summary>
+            <div>
+              <p>«Selv verdens beste prototype kan ikke erstatte følelsen av faktisk å prøve en løsning, eller å kunne klikke seg gjennom den.» Mål: vurdere om brukertesting bør skje gjennom et pilotprosjekt i tillegg til (eller i stedet for) prototyping — det gir mer realistisk, ekte tilbakemelding.</p>
+              <p>Bygg om mulig og test en minste levedyktige versjon (MVP): bruk komponenter fra et eksisterende designsystem, et enkelt headless CMS, eller simuler databehandling lokalt i nettleseren. Rådfør deg gjerne med et IT-arkitekturpanel eller fagmiljøet — det sparer utviklingstid. Gir piloten gode resultater, går dere videre med en mer utviklet versjon.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </details>
+
+    <details class="phase">
+      <summary><span><span class="s-title">Utvikle IT-løsningen</span><span class="s-q">Hvordan bygger og drifter vi løsningen teknisk?</span></span><svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></summary>
+      <div class="phase-body">
+        <div>
+          <h4>Verktøy i denne fasen</h4>
+          <ul>
+            <li>Teknisk arkitektur og valg av plattform</li>
+            <li>Smidig utvikling med jevnlig brukertesting</li>
+            <li>Plan for datadeling og API-er</li>
+          </ul>
+        </div>
+        <div class="no-callout">
+          <h4>🇳🇴 Norsk ressurs</h4>
+          <p>Utnytt det felles økosystemet: Altinn Studio for skjema og saksflyt, ID-porten/Maskinporten for innlogging, og designsystemet.no for grensesnittet.</p>
+          <p>Skal tjenesten bygges i Altinn Studio: se plattformens egne <a href="https://docs.altinn.studio/nb/altinn-studio/v8/guides/design/guidelines/" target="_blank" rel="noopener">designretningslinjer</a> (komponenter, tilgjengelighet, språk) og <a href="https://docs.altinn.studio/nb/altinn-studio/v8/guides/development/" target="_blank" rel="noopener">fullstendige utviklerdokumentasjon</a> for de tekniske detaljene. Vi har også en egen <a href="../../verktoykasser/digitale-offentlige-tjenester/altinn-studio-app/">praktisk, trinnvis metode for å bygge en Altinn Studio-app</a>, basert på erfaring fra reelle prosjekter.</p>
+        </div>
+      </div>
+      <div class="phase-subarticles">
+        <h4>Underartikler fra originalen — gjenfortalt på norsk</h4>
+        <div class="phase-subarticles-list">
+          <details class="ds-details">
+            <summary>Utviklingsplan</summary>
+            <div>
+              <p>Nøkkelspørsmål: hvordan kan eksisterende kode, infrastruktur og kompetanse gjenbrukes? Hva må bygges fra bunnen? Bruk funnene fra prototyping og pilotprosjekt til å identifisere utviklingsbehovet, og prioriter med rammeverket «nå — snart — en gang i fremtiden».</p>
+              <p>Nyttige prioriteringsverktøy: KJ-metoden (affinitetsdiagram), Kano-modellen, og prioritering etter brukerbehov. Sett av en dataansvarlig i teamet — datakvalitet påvirker tjenestekvaliteten direkte. Husk også felles, tverrgående krav (arkitektur, sikkerhet, interoperabilitet) som gjelder for offentlige IT-prosjekter i din kontekst.</p>
+            </div>
+          </details>
+          <details class="ds-details">
+            <summary>Finne et utviklingsteam</summary>
+            <div>
+              <p>For teknisk komplekse løsninger og ved anskaffelse: sett sammen en beskrivelse av ønsket funksjonalitet, på samme måte som en kravspesifikasjon. Hvordan dere setter sammen selve utviklingsteamet avhenger av virksomhetens egne rutiner og omfanget av arbeidet — sjekk interne anskaffelses- og bemanningsrutiner, dokumenter kravene grundig, og identifiser de tekniske teammedlemmene dere trenger.</p>
+            </div>
+          </details>
+          <details class="ds-details">
+            <summary>Skape en utviklingskultur</summary>
+            <div>
+              <p>Smidig utvikling handler i bunn og grunn om én ting: en måte å organisere teamets arbeid på, uten unødvendige møter eller overstyring. Når noe endrer seg (ny informasjon, nye teammedlemmer), bør roller, ansvar, begrepsbruk og mål gjennomgås på nytt med det samme.</p>
+              <p>Unntaket fra «færrest mulig møter»: <strong>retrospektiv</strong> («retro») — en jevnlig samtale om hvordan teamet jobber og hva som kan bli bedre, bør ikke kuttes. La hvert teammedlem si ifra om hva som ville støttet dem best, og finn sammen den arbeidsformen som er mest produktiv og trivelig.</p>
+            </div>
+          </details>
+          <details class="ds-details">
+            <summary>Designsystemer</summary>
+            <div>
+              <p>Etter at utviklingskulturen er på plass: lag den visuelle utformingen av grensesnittet. Bruk et eksisterende designsystem fremfor å bygge nytt — det reduserer kostnader og sikrer konsistens på tvers av offentlige digitale tjenester (i Norge: designsystemet.no).</p>
+              <p>Et designsystem er en samling komponenter og retningslinjer for å lage brukergrensesnitt. Trenger dere en ny komponent underveis, bidra den gjerne tilbake til eieren av designsystemet, slik at andre prosjekter kan gjenbruke den.</p>
+            </div>
+          </details>
+          <details class="ds-details">
+            <summary>Selve utviklingen</summary>
+            <div>
+              <p>Fire steg: samle inn innspill → lag en fungerende versjon → få den til å fungere riktig → gjør den rask. <strong>Alfa-fase:</strong> målet er en løsning som fungerer i praksis — trenger ikke være vakker, men reelt funksjonell. Jobb i korte sykluser (idé → brukerhistorie → kode → server) slik at nye funksjoner kan testes ukentlig. En brukerhistorie: «Som innlogget bruker ønsker jeg [hva], for [hvorfor]».</p>
+              <p><strong>Beta-fase:</strong> en mer detaljert versjon, med bredere brukertesting. Universell utforming kan ikke legges til i et ferdig produkt — den må adresseres i hvert steg. Design også for feiltilstander: tomme tilstander, lasting, dårlig nettforbindelse, systemfeil, brukerfeil. Test både at løsningen fungerer teknisk riktig, og at den svarer på det opprinnelige behovet.</p>
+            </div>
+          </details>
+          <details class="ds-details">
+            <summary>Webanalyse</summary>
+            <div>
+              <p>«Du kan bare fikse problemer du er klar over.» Webanalyse samler statistiske, ikke-personlige data om hvordan tjenesten faktisk brukes (Google Analytics og Matomo er de vanligste verktøyene). Spørsmål å søke svar på: hvor raskt går systemet ved normal og topp belastning? Hvor faller brukere fra? Hvilke lenker/knapper klikkes mest?</p>
+              <p>Vurder fire kategorier av målinger: virksomhetens økonomi/effektivitet, bruken av selve e-tjenesten, tekniske ytelsesindikatorer, og brukertilfredshet. Bruk SMART-kriterier (spesifikk, målbar, oppnåelig, relevant, tidsbestemt), og sett opp et personvernvennlig målesystem før dere går videre til innføring.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </details>
+
+    <details class="phase">
+      <summary><span><span class="s-title">Innføring</span><span class="s-q">Hvordan lanserer vi tjenesten, og følger vi opp brukerne etterpå?</span></span><svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></summary>
+      <div class="phase-body">
+        <div>
+          <h4>Verktøy i denne fasen</h4>
+          <ul>
+            <li>Lanseringsplan og kommunikasjon</li>
+            <li>Opplæring av ansatte i førstelinjen</li>
+            <li>Forvaltningsmodell for videre drift</li>
+          </ul>
+        </div>
+        <div class="no-callout">
+          <h4>🇳🇴 Norsk ressurs</h4>
+          <p>Bruk <a href="https://www.digdir.no/klart-sprak/ny-veileder-om-klart-sprak-i-utvikling-av-digitale-tjenester/3603" target="_blank" rel="noopener">veilederen som kobler klarspråk og tjenestedesign</a> når tekstene i tjenesten skal ferdigstilles.</p>
+        </div>
+      </div>
+      <div class="phase-subarticles">
+        <h4>Underartikler fra originalen — gjenfortalt på norsk</h4>
+        <div class="phase-subarticles-list">
+          <details class="ds-details">
+            <summary>Organisere intern opplæring</summary>
+            <div>
+              <p>Mål: en opplæringsøkt i en positiv atmosfære, der støttepersonell (f.eks. kundeservice) kan forberede seg på lanseringen. Økten bør introdusere den nye løsningen, forklare utviklingsreisen og hvilke virksomheter som var involvert, forklare hva som endrer seg for sluttbrukeren, klargjøre forventninger, og dele hvilke spørsmål brukerne trolig vil stille.</p>
+              <p>Skap et rom der det er trygt å spørre, og la deltakerne prøve løsningen selv. Gjennomfør opplæringen før dere går live.</p>
+            </div>
+          </details>
+          <details class="ds-details">
+            <summary>Teknisk overvåking</summary>
+            <div>
+              <p>Tidlig feildeteksjon gjør problemer raskere, billigere og enklere å løse — på tvers av tjenester, servere, domener og tilknyttede systemer. Sett opp automatisk feilvarsling fremfor å vente på at frustrerte brukere melder fra selv. Avklar hvem som skal varsles for hvilke typer feil, og — viktigst — invester tid i å finne og fikse rotårsaken, ikke bare symptomene.</p>
+            </div>
+          </details>
+          <details class="ds-details">
+            <summary>A/B-testing av videre forbedringer</summary>
+            <div>
+              <p>Mål: finne ut hvilken av to like løsningsvarianter (A og B) brukerne foretrekker. Kjør versjon A (eksisterende) og versjon B (ny) parallelt, og fordel brukere mellom dem etter hvor kritisk tjenesten er (f.eks. 10–20 % ser B). Sett en tidsramme — en bestemt periode, eller til et gitt antall brukere har sett B.</p>
+              <p>Forbered dere: vær tydelige på hva dere faktisk sammenligner, sett opp analyseverktøyet på forhånd, og avklar med kundeservice hvordan data samles inn. Involver utviklerne allerede i prototype-fasen — de kan ikke bestemme suksesskriteriene, det må komme fra virksomheten selv. Vinner B, erstatter den eksisterende løsning.</p>
+            </div>
+          </details>
+          <details class="ds-details">
+            <summary>Myk lansering (soft launch)</summary>
+            <div>
+              <p>Innfør nye eller endrede tjenester gradvis, ikke med brask og bram. Gjør tjenesten tilgjengelig for brukerne i en «oppvarmingsperiode» — gjerne en uke — før dere begynner å markedsføre den, slik at dere rekker å rette opp tekniske og interne prosessfeil først. Sett i gang tjenesten, og markedsfør den <em>deretter</em>.</p>
+              <p>Sjekk samtidig at den oppdaterte tjenesten er lagt inn i en eventuell offentlig tjenestekatalog dere har i egen virksomhet eller sektor.</p>
+            </div>
+          </details>
+          <details class="ds-details">
+            <summary>Offentlig informasjon</summary>
+            <div>
+              <p>Etter lansering: sørg for at informasjonen når alle som trenger den. Kommunikasjonsavdelingen bør allerede kjenne til prosjektet fra før. Forbered en pressemelding og eventuelt en markedsføringsstrategi sammen med kommunikasjonsteamet.</p>
+            </div>
+          </details>
+          <details class="ds-details">
+            <summary>Innhente tilbakemeldinger</summary>
+            <div>
+              <p>Målinger etablerer status og gir retning for videre forbedring. Jo flere brukere, jo mer tilbakemelding — se etter gjentakende utsagn dere faktisk kan handle på. Husk: brukere av obligatoriske offentlige tjenester klager oftere enn de roser — som fortau: en godt utformet tjeneste blir usynlig, en dårlig utformet skaper spontane klager. Skill følelsesmessige kommentarer fra reelle problemer.</p>
+              <p>Metoder: analyseverktøy (Google Analytics, Matomo), spørreundersøkelser (skjema, brukertester, kortsortering), og Net Promoter Score (NPS) — brukere svarer 0–10 på hvor sannsynlig de er til å anbefale tjenesten; promotører (9–10) minus kritikere (0–6) gir NPS-scoren.</p>
+            </div>
+          </details>
+          <details class="ds-details">
+            <summary>Videre forbedring</summary>
+            <div>
+              <p>Ingen tjeneste er noensinne helt ferdig. Forbedre langs tre akser: stabilitet, brukervennlighet og hastighet. Offentlige tjenester er ikke som forbrukerprogramvare — hyppige, små endringer kan i sum forvirre faste brukere som kommer tilbake måneder senere. Foretrekk planlagte, samlede endringer fremfor kontinuerlige småjusteringer, og fortsett å oppdatere utviklingsplanen basert på tilbakemeldingene dere samler inn.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </details>
+
+    <details class="phase">
+      <summary><span><span class="s-title">Dele erfaringer</span><span class="s-q">Hva har vi lært, og hvordan gjør vi kunnskapen tilgjengelig for andre?</span></span><svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></summary>
+      <div class="phase-body">
+        <div>
+          <h4>Verktøy i denne fasen</h4>
+          <ul>
+            <li>Kort erfaringsrapport (hva fungerte / hva ville vi gjort annerledes)</li>
+            <li>Dele metoder og maler i eget fagnettverk</li>
+          </ul>
+        </div>
+        <div class="no-callout">
+          <h4>🇳🇴 Norsk ressurs</h4>
+          <p>Del casen med <strong>DOGA/Stimulab</strong> eller som innspill til <a href="https://oecd-opsi.org/guide/service-design/" target="_blank" rel="noopener">OECD OPSI</a>, slik at andre norske virksomheter kan finne den igjen.</p>
+        </div>
+      </div>
+      <div class="phase-subarticles">
+        <h4>Underartikler fra originalen — gjenfortalt på norsk</h4>
+        <div class="phase-subarticles-list">
+          <details class="ds-details">
+            <summary>Teaminternt tilbakeblikk (retro)</summary>
+            <div>
+              <p>Vellykket tjeneste- og prosjektledelse krever evnen til å se tilbake på det som er gjort. Gjennomfør retrospektiv-møter underveis i prosjektet (f.eks. hvert kvartal), ikke bare til slutt — det gir kontinuerlig forbedring av arbeidsmåten. Se på hele prosjektet helhetlig. Verktøy: Miro, Figma, Metro Retro, eller ganske enkelt en tavle og lapper.</p>
+            </div>
+          </details>
+          <details class="ds-details">
+            <summary>Skrive en erfaringshistorie</summary>
+            <div>
+              <p>Oppsummer det dere har lært, til bruk internt og for andre. Gode erfaringshistorier hjelper nye tjenesteeiere og prosjektteam å lære av andres feil, hente inspirasjon fra det som fungerte, og gjennomføre nye prosjekter mer effektivt.</p>
+              <p>Foreslått struktur: kort prosjektsammendrag → tjenesteoversikt → problembeskrivelse → løsningen → teknologien som ble brukt → teamsammensetning → viktige beslutningspunkter, suksesser og læringsmomenter. Erfaringshistorier kan også være video eller annet format — velg det som passer publikummet.</p>
+            </div>
+          </details>
+          <details class="ds-details">
+            <summary>Presentere resultater</summary>
+            <div>
+              <p>Del erfaringene og resultatene med kolleger — i egen virksomhet, i fagnettverk, eller i bransjefora. Se etter muligheter til å vise fram en vellykket tjeneste, gjerne også utenfor egen virksomhet.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </details>
+    </div>
+  </div>
+
+  <section class="section" id="metodebibliotek" style="border-top:1px solid var(--ds-color-border-subtle); margin-top:var(--ds-size-14); scroll-margin-top:5.5rem;">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Oppslagsverk</span>
+        <h2>Metodebibliotek</h2>
+        <p>De samme verktøyene brukes i flere faser. Tabellen under gir en kort forklaring på seks reelle Estland-verktøy, pluss «tjenesteblueprint» — et vanlig tjenestedesign-begrep vi har lagt til, uten egen kilde-side. Alle seks (ikke tjenesteblueprint) har i tillegg en fyldigere versjon i «Verktøy i detalj» lenger ned, sammen med de resterende 19 verktøyene fra originalens bibliotek på 25.</p>
+      </div>
+      <div class="table-scroll">
+        <table class="ds-table">
+          <thead><tr><th scope="col">Verktøy</th><th scope="col">Kort forklart</th></tr></thead>
+          <tbody>
+            <tr><td>Interessentanalyse</td><td>Oversikt over hvem som påvirkes av eller påvirker tjenesten, og hvor mye de bør involveres.</td></tr>
+            <tr><td>Persona</td><td>En konstruert, men forskningsbasert brukertype som gjør en brukergruppes behov konkrete for teamet.</td></tr>
+            <tr><td>Kanvas for tjenesteutvikling</td><td>Ettsides oversikt over problem, brukere, verdi og ressurser — et felles startpunkt for teamet.</td></tr>
+            <tr><td>Tjenesteblueprint</td><td>Diagram som viser brukerens steg sammen med det usynlige arbeidet bak: systemer, ansatte, andre etater.</td></tr>
+            <tr><td>Prototyping</td><td>Å gjøre en idé testbar i en enkel, rimelig form — fra papirskisse til klikkbar skisse.</td></tr>
+            <tr><td>Brukbarhetstesting</td><td>Å observere reelle brukere løse konkrete oppgaver i løsningen, for å finne hindringer.</td></tr>
+            <tr><td>A/B-testing</td><td>Å sammenligne to varianter av en løsning i drift, for å se hvilken som fungerer best.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="border-top:1px solid var(--ds-color-border-subtle);">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Oppslagsverk, fortsatt</span>
+        <h2>Verktøy i detalj</h2>
+        <p>Alle 25 verktøyene fra originalens verktøybibliotek, med fulle steg — ikke bare én setning. Det inkluderer seks av radene i tabellen over (alle bortsett fra «tjenesteblueprint», som ikke har noen kilde-side å hente mer fra). De fem siste nedenfor er korte energileker/icebreakere for teamsamlinger, ikke designmetoder.</p>
+      </div>
+      <div class="tool-details-list">
+        <details class="ds-details">
+          <summary>Tjenestemodenhetsmodell</summary>
+          <div>
+            <p class="meta" style="margin-bottom:var(--ds-size-3);"><span>⏱ 1–2 dager</span><span>·</span><span>👥 2–10 personer</span><span>·</span><span>Middels</span></p>
+            <p>Et regneark-basert egenvurderingsverktøy som måler hvor moden en tjeneste er langs flere dimensjoner, med automatisk poengberegning per blokk og totalt.</p>
+            <p>Brukes til å vurdere en eksisterende tjeneste, eller som utgangspunkt og kontrollpunkt når en ny tjeneste utvikles eller videreutvikles.</p>
+          </div>
+        </details>
+        <details class="ds-details">
+          <summary>Tjenestedesign-kort (spill)</summary>
+          <div>
+            <p class="meta" style="margin-bottom:var(--ds-size-3);"><span>⏱ Fleksibelt</span><span>·</span><span>👥 Team</span><span>·</span><span>Lav–middels</span></p>
+            <p>Et spillbasert planleggingsverktøy — fem spillebrett og 60 kort (rolle-, aktivitets-, metodikk- og risikokort) som hjelper teamet planlegge et tjenesteutviklingsprosjekt gjennom kreativ problemløsning.</p>
+            <p>Fem spillemåter dekker ulike behov: målsetting, rask oversikt, detaljert handlingsplan, fordeling av arbeidsmengde i teamet, og risikoanalyse. Skriv ut materialet (eller bruk et digitalt whiteboard), utpek en spilleder, og velg spillemåte sammen som team.</p>
+          </div>
+        </details>
+        <details class="ds-details">
+          <summary>Prototyping</summary>
+          <div>
+            <p class="meta" style="margin-bottom:var(--ds-size-3);"><span>⏱ 1–2 dager</span><span>·</span><span>👥 2–10 personer</span><span>·</span><span>Lav</span></p>
+            <p>Lag en tidlig modell av løsningen for å teste den med ekte brukere før den bygges ferdig. To nivåer: <strong>lo-fi</strong> (papirskisse, ikke klikkbar — billig, rask, god for tidlig konseptvalidering) og <strong>hi-fi</strong> (klikkbar, ligner sluttproduktet — god for å teste konkrete detaljer og vise fram til ledelsen).</p>
+            <p>Brukes i løse- og teste-fasene, etter at brukerinnsikt er samlet og en løsningsretning er valgt.</p>
+          </div>
+        </details>
+        <details class="ds-details">
+          <summary>«Hvordan kan vi»-spørsmål</summary>
+          <div>
+            <p class="meta" style="margin-bottom:var(--ds-size-3);"><span>⏱ 1–2 timer</span><span>·</span><span>👥 2–10 personer</span><span>·</span><span>Lav</span></p>
+            <p>Skriv om hvert brukerbehov/persona til et åpent «hvordan kan vi …»-spørsmål. Eksempel: behovet «Riina må raskt oppdatere en digital resept» blir «Hvordan kan vi hjelpe Riina å oppdatere en resept så raskt som mulig?»</p>
+            <p>Bruk spørsmålene som utgangspunkt for idémyldring i teamet, gjerne kombinert med Hull 8/Crazy 8s under.</p>
+          </div>
+        </details>
+        <details class="ds-details">
+          <summary>Brukerbehovs-utsagn</summary>
+          <div>
+            <p class="meta" style="margin-bottom:var(--ds-size-3);"><span>⏱ 1–2 timer</span><span>·</span><span>👥 2–10 personer</span><span>·</span><span>Lav</span></p>
+            <p>Én kort setning per persona som fanger et konkret behov, etter malen «[Bruker] trenger [behov], for å [mål]». Eksempel: «Riina, sykepleier og mor til to, må raskt oppdatere barnets digitale resept uten å gå ut av komfortsonen sin, for å sikre at medisinbeholdningen ikke går tom.»</p>
+            <p>Viktig: behovet skal være forskningsbasert, ikke noe teamet dikter opp — og aldri formulert som en løsning eller en konkret funksjon.</p>
+          </div>
+        </details>
+        <details class="ds-details">
+          <summary>Litteraturgjennomgang</summary>
+          <div>
+            <p class="meta" style="margin-bottom:var(--ds-size-3);"><span>⏱ 1–2 dager</span><span>·</span><span>👥 2–10 personer</span><span>·</span><span>Lav</span></p>
+            <p>Systematisk gjennomgang av eksisterende forskning og fagstoff om temaet, i forstå-fasen, før løsninger utformes: (1) avgrens hvilke fagområder prosjektet berører, (2) søk med relevante søkeord i Google Scholar, biblioteker, fagtidsskrifter, (3) vurder kildene kritisk, (4) sorter funn tematisk, (5) prioriter det direkte relevante, (6) referer konsekvent.</p>
+            <p><span class="no-resource-label">🇳🇴 Norsk ressurs</span><a href="https://kudos.dfo.no/" target="_blank" rel="noopener">Kudos</a> (DFØ) samler over 40 000 evalueringer, utredninger, NOU-er og andre kunnskapsdokumenter fra forvaltningen — ofte mer relevant enn akademiske databaser for denne typen litteraturgjennomgang.</p>
+          </div>
+        </details>
+        <details class="ds-details">
+          <summary>AEIOU (observasjonsrammeverk)</summary>
+          <div>
+            <p class="meta" style="margin-bottom:var(--ds-size-3);"><span>⏱ Feltobservasjon</span><span>·</span><span>Lav–middels</span></p>
+            <p>Et rammeverk for strukturerte brukerobservasjoner, med fem kategorier: <strong>A</strong>ktiviteter (hva folk faktisk gjør), <strong>E</strong>nvironment/miljø (fysiske og sanselige omgivelser), <strong>I</strong>nteraksjoner (hvordan folk bruker systemer og tjenester), <strong>O</strong>bjekter (fysiske gjenstander involvert), <strong>U</strong>sers/brukere (hvem som er til stede, og relasjonene mellom dem).</p>
+            <p>Lag én rute per kategori på et skjema, og fyll ut underveis i feltobservasjon — brukes når prosjektet faktisk krever å observere brukere i deres egen kontekst.</p>
+          </div>
+        </details>
+        <details class="ds-details">
+          <summary>Verditilbudskanvas</summary>
+          <div>
+            <p class="meta" style="margin-bottom:var(--ds-size-3);"><span>⏱ 1–2 timer</span><span>·</span><span>👥 2–10 personer</span><span>·</span><span>Middels</span></p>
+            <p>Et topartskanvas som kobler brukerens smertepunkter, gleder og hovedaktiviteter (høyre side) mot hvordan tjenesten faktisk løser dem (venstre side) — målet er at de to sidene skal henge sammen.</p>
+            <p>Steg: gjennomfør brukerintervjuer og lag personas → fyll ut brukerprofilen → fyll ut verdikartet (hva lindrer smertene, hva skaper gevinst, hvilke konkrete løsninger) → sjekk at sidene faktisk matcher.</p>
+          </div>
+        </details>
+        <details class="ds-details">
+          <summary>Fortell historien din (teambuilding)</summary>
+          <div>
+            <p class="meta" style="margin-bottom:var(--ds-size-3);"><span>⏱ 1–2 timer</span><span>·</span><span>👥 2–10 personer</span><span>·</span><span>Middels</span></p>
+            <p>En strukturert historiefortellings-øvelse for å bygge tillit i teamet: tre runder (barndom, tidlig voksenliv, i dag) på fargekodede lapper, etterfulgt av at hver deltaker forteller sin historie (~4 minutter). Brukes ved oppstart av nye team, eller når teamet gjenforenes etter en pause.</p>
+            <p>Fasilitatoransvar: skap et trygt rom. Deltakere kan holde tilbake det de ikke ønsker å dele, og følelser som dukker opp er helt normalt.</p>
+          </div>
+        </details>
+        <details class="ds-details">
+          <summary>Hull 8 / Crazy 8s-idéverksted</summary>
+          <div>
+            <p class="meta" style="margin-bottom:var(--ds-size-3);"><span>⏱ 1–2 timer</span><span>·</span><span>👥 2–40 personer</span><span>·</span><span>Lav</span></p>
+            <p>Rask idémyldring: hver deltaker bretter et A4-ark i åtte, og tegner eller skriver 8 ideer på 8 minutter (ett minutt per idé).</p>
+            <p>Så: velg de tre beste ideene og presenter dem → teamet bygger videre med «ja, og …» → avstemning på minst tre ideer som går videre → arbeidsgrupper detaljerer hver idé (storyboard, papirprototype, rollespill) → prioriter til slutt med en beslutningsmatrise (under).</p>
+          </div>
+        </details>
+        <details class="ds-details">
+          <summary>AIR-tilbakemeldingsmodell</summary>
+          <div>
+            <p class="meta" style="margin-bottom:var(--ds-size-3);"><span>⏱ ~1 time</span><span>·</span><span>👥 2–40 personer</span><span>·</span><span>Middels</span></p>
+            <p>En trestegs modell for konstruktiv tilbakemelding: <strong>Action</strong> — konkret observert handling («da du …»), <strong>Impact</strong> — hvordan det påvirket deg («det gjorde at jeg …»), <strong>Request</strong> — en SMART-formulert forespørsel («ville du vært villig til …?»).</p>
+            <p>Prinsipper: beskriv handling, ikke karakter; snakk i jeg-form; vær konkret og betimelig; balanser positivt og konstruktivt; lytt uten å avbryte. Brukes løpende i teamsamarbeidet — se også «Tilbakemelding i teamet» i fase 1.</p>
+          </div>
+        </details>
+        <details class="ds-details">
+          <summary>Kortsortering</summary>
+          <div>
+            <p class="meta" style="margin-bottom:var(--ds-size-3);"><span>⏱ Flere deltakere</span><span>·</span><span>Lav–middels</span></p>
+            <p>Deltakere sorterer kort med innholdselementer i grupper som gir mening for dem — avdekker hvordan folk faktisk tenker om struktur, og brukes til å bygge menyer, navigasjon og informasjonsarkitektur.</p>
+            <p>Steg: skriv ett element per kort (15–80 kort avhengig av omfang) → rekrutter minst 15 deltakere som ikke har vært involvert i utviklingen → la dem sortere fritt, det finnes ingen feil svar → la dem navngi gruppene sine <em>etter</em> sortering → spør gjerne hvorfor de sorterte som de gjorde → analyser mønstre på tvers av alle deltakere. Brukes i løse-fasen.</p>
+          </div>
+        </details>
+        <details class="ds-details">
+          <summary>Vektet beslutningsmatrise</summary>
+          <div>
+            <p class="meta" style="margin-bottom:var(--ds-size-3);"><span>⏱ 1–2 timer</span><span>·</span><span>👥 2–10 personer</span><span>·</span><span>Lav</span></p>
+            <p>Sammenlign flere løsningsalternativer mot flere kriterier med ulik viktighet, og kom fram til en begrunnet rangering. Brukes i løse-fasen når flere løsninger er aktuelle og valget må begrunnes overfor andre.</p>
+            <p>Steg: (1) list opp alle løsningsalternativene som rader, (2) list opp kriteriene som avgjør valget (kostnad, brukerverdi, gjennomføringstid …) som kolonner, (3) gi hvert kriterium en vekt, f.eks. 1–5, (4) poengsett hver løsning på hvert kriterium med samme skala, (5) multipliser vekt × poeng og summer per løsning — høyest totalsum vinner.</p>
+          </div>
+        </details>
+        <details class="ds-details">
+          <summary>Interessentanalyse</summary>
+          <div>
+            <p class="meta" style="margin-bottom:var(--ds-size-3);"><span>⏱ 1–2 timer</span><span>·</span><span>👥 2–10 personer</span><span>·</span><span>Middels</span></p>
+            <p>Kartlegg alle som blir påvirket av eller påvirker tjenesten — personer, grupper eller organisasjoner som har interesse i, bekymring for, eller innflytelse over resultatet. Brukes i forstå-fasen, når dere har nok grunnlag til å begynne å strukturere det.</p>
+            <p>Steg: (1) idémyldre alle mulige interessenter på papir, tavle eller i Miro — sikt på fullstendighet, ikke kortfattethet, (2) grupper og navngi resultatene etter fellestrekk: hvem hører til samme kategori, og hvilke kategorier manglet dere først? Resultatet er et kart som viser interessenter med roller og relasjoner synlige — det minner teamet på hvem prosjektet påvirker, hvem som har mest innflytelse, og hvor ressursene bør rettes.</p>
+          </div>
+        </details>
+        <details class="ds-details">
+          <summary>Persona</summary>
+          <div>
+            <p class="meta" style="margin-bottom:var(--ds-size-3);"><span>⏱ 1–2 dager</span><span>·</span><span>👥 2–10 personer</span><span>·</span><span>Lav</span></p>
+            <p>Arketypiske brukere hvis mål og egenskaper representerer behovene til en større brukergruppe — vanligvis presentert som ett–to-siders dokumenter med atferdsmønstre, mål, ferdigheter, holdninger og bakgrunn. Brukes i forstå-fasen før designarbeidet starter, eller etter brukertesting for å forstå tilbakemeldinger bedre. Forutsetter brukerintervjuer eller eksisterende brukerforskning.</p>
+            <p>Steg: (1) gjennomgå brukerdata fra intervjuene — identifiser smertepunkter, hindringer, mål og behov, (2) let etter atferdsmønstre på tvers av intervjuobjektene (bakgrunn, atferd, personlighet, hindringer, mål, behov), (3) visualiser personaen tydelig og forståelig. En persona skal representere en brukergruppe, ikke en spesifikk, ekte person.</p>
+          </div>
+        </details>
+        <details class="ds-details">
+          <summary>Kanvas for tjenesteutvikling</summary>
+          <div>
+            <p class="meta" style="margin-bottom:var(--ds-size-3);"><span>⏱ 1–2 dager</span><span>·</span><span>👥 2–10 personer</span><span>·</span><span>Middels</span></p>
+            <p>Et strategisk planleggingsverktøy som kartlegger aktivitetene som trengs for å forbedre en tjeneste, interessentene som er involvert, deres prioriteringer, og hvordan alt henger sammen. Fylles ut gradvis gjennom prosjektet, etter hvert som informasjon kommer fra interessentkartlegging, brukerintervjuer, brukerreiser og verditilbudsarbeid.</p>
+            <p>Ni steg: (1) identifiser visjonen — hvorfor gjør vi dette, hva vil vi oppnå, for hvem? (2) identifiser roller i fire grupper: eiere/byggere, partnere/tilretteleggere, brukere/kunder, og nytteeiere (de som drar nytte uten nødvendigvis å bruke tjenesten selv), (3) identifiser nøkkelaktiviteter, (4) avklar tilgjengelige ressurser (penger, folk, politisk støtte, teknologi), (5) kartlegg brukerreiser, (6) bestem leveringskanaler (digitalt, fysisk, mobil), (7) definer verditilbudet med verditilbudskanvas, (8) identifiser gevinster og hvordan de måles, (9) lag en «heispitch» — en fengende introduksjon på maks 30 sekunder.</p>
+          </div>
+        </details>
+        <details class="ds-details">
+          <summary>Brukerintervjuer</summary>
+          <div>
+            <p class="meta" style="margin-bottom:var(--ds-size-3);"><span>⏱ 1–2 uker</span><span>·</span><span>👥 2–10 personer</span><span>·</span><span>Middels</span></p>
+            <p>Én-til-én-samtaler med brukere om et gitt tema — bruk, atferd, følelser, vaner. Kan være strukturerte (fast spørsmålsskjema, lett å kontrollere og analysere) eller ustrukturerte (fri flyt, mer komfortabelt for deltakeren). Brukes i forstå-fasen før design starter, eller etter brukertesting for å forstå tilbakemeldinger bedre.</p>
+            <p>Fem steg: (1) sett et konkret, realistisk mål — et for bredt mål gjør intervjuene mislykkede, (2) forbered spørsmål på forhånd: ett element per spørsmål, spør om konkrete hendelser fremfor generelle prosesser, unngå ledende, lukkede eller tvetydige spørsmål, (3) forbered oppfølgingsspørsmål, (4) gjennomfør intervjuet — forklar formålet, lytt aktivt, ikke avbryt, start med enkle åpne spørsmål, vær ekte, (5) analyser notater/opptak i etterkant og se etter gjentakende mønstre på tvers av deltakerne.</p>
+          </div>
+        </details>
+        <details class="ds-details">
+          <summary>Brukerreise</summary>
+          <div>
+            <p class="meta" style="margin-bottom:var(--ds-size-3);"><span>⏱ 1–2 timer</span><span>·</span><span>👥 2–10 personer</span><span>·</span><span>Middels</span></p>
+            <p>Et diagram som visualiserer brukerens vei gjennom en tjeneste — fra første kontakt til langvarig bruk — inkludert mål, motivasjon og følelser underveis. Fungerer for både dagens situasjon (AS-IS) og en ønsket fremtid (TO-BE). Forutsetter kjennskap til personas og gjennomført brukerforskning.</p>
+            <p>Steg: (1) lag én brukerreise per persona — ulike personas har ulike behov, mål og smertepunkter som påvirker forskjellige steg i reisen, (2) plasser brukerens mål og handlinger kronologisk på en tidslinje (typiske faser: oppdagelse, bli kjent, bruk), (3) bygg videre med tanker og følelser fra brukerforskningen — vær spesielt oppmerksom på hvor brukeren står fast eller blir skuffet.</p>
+          </div>
+        </details>
+        <details class="ds-details">
+          <summary>Brukbarhetstesting</summary>
+          <div>
+            <p class="meta" style="margin-bottom:var(--ds-size-3);"><span>⏱ 1–2 timer per økt</span><span>·</span><span>👥 2–10 personer</span><span>·</span><span>Middels</span></p>
+            <p>La ekte brukere prøve tjenesten mens dere observerer atferd og reaksjoner — for å avdekke forvirrende punkter og forbedringsmuligheter før lansering. Brukes i teste-fasen, når en fungerende prototype eller MVP finnes.</p>
+            <p>Fem steg: (1) bestem hva som skal testes, basert på teamets antakelser om styrker og svakheter, (2) lag konkrete, målbare oppgaver som treffer tjenestens viktigste funksjoner, (3) sett tydelige kriterier for hva som regnes som bestått, (4) skriv en testplan (mål, opptaksmetode, bakgrunn, deltakerspørsmål, oppgaver), (5) gjennomfør testen — hold deg nøytral, følg planen, noter grundig.</p>
+          </div>
+        </details>
+        <details class="ds-details">
+          <summary>A/B-testing</summary>
+          <div>
+            <p class="meta" style="margin-bottom:var(--ds-size-3);"><span>⏱ 1–2 uker</span><span>·</span><span>👥 2–10 personer</span><span>·</span><span>Høy</span></p>
+            <p>Del brukerne tilfeldig i to grupper som møter hver sin variant (A og B) av en løsning, og mål hvilken som presterer best. Viser <em>hvilken</em> løsning som virker best, ikke <em>hvorfor</em> — supplér derfor gjerne med kvalitative intervjuer. Krever en ferdig eller fungerende prototype som oppleves som ekte for brukeren.</p>
+            <p>Sentrale steg: test kun én variabel om gangen (farge, plassering, tekst) → sett en tydelig hypotese og suksessmål på forhånd → lag en kontrollversjon (A) og en utfordrer (B) → fordel testgruppene likt og tilfeldig, og kjør dem samtidig (tidspunkt/vær/høytider kan skjeve resultatet ellers) → gi testen nok tid til å bli statistisk pålitelig → vinner én variant klart, avvikle den andre; er resultatet uklart, undersøk hvorfor og prøv en ny hypotese.</p>
+          </div>
+        </details>
+        <details class="ds-details">
+          <summary>Klappeleken</summary>
+          <div>
+            <p class="meta" style="margin-bottom:var(--ds-size-3);"><span>⏱ Opptil 1 time</span><span>·</span><span>👥 2–10 personer</span><span>·</span><span>Lav</span></p>
+            <p>Energilek: deltakerne står i ring. Person A får øyekontakt med nabo B og klapper samtidig med dem — kun øyekontakt, ingen ord. B sender klappet videre til C på samme måte, og runden fortsetter i stadig raskere tempo.</p>
+            <p>Videre variant («dobbeltklapp»): når gruppen mestrer grunnversjonen, kan retningen snus — B holder blikket på A i stedet for å gå videre, de klapper igjen sammen, og A snur til sin andre nabo. Brukes når som helst gruppen trenger en rask energi-boost.</p>
+          </div>
+        </details>
+        <details class="ds-details">
+          <summary>Blikkleken</summary>
+          <div>
+            <p class="meta" style="margin-bottom:var(--ds-size-3);"><span>⏱ Opptil 1 time</span><span>·</span><span>👥 2–10 personer</span><span>·</span><span>Lav</span></p>
+            <p>Deltakerne står i ring og unngår å møte hverandres blikk. Fasilitator roper «hoder ned» (alle ser i bakken) og «hoder opp» (alle ser rett på en annen deltaker).</p>
+            <p>Får to deltakere øyekontakt samtidig, peker de på hverandre og lager en høylytt lyd — så forlater begge ringen. Fortsett til to personer er igjen for en siste runde. Brukes når en trøtt gruppe trenger rask oppkvikking.</p>
+          </div>
+        </details>
+        <details class="ds-details">
+          <summary>Skattejakt</summary>
+          <div>
+            <p class="meta" style="margin-bottom:var(--ds-size-3);"><span>⏱ Opptil 1 time</span><span>·</span><span>👥 2–10 personer</span><span>·</span><span>Lav</span></p>
+            <p>For videomøter: fasilitator utroper en «skatt» — f.eks. yndlingskoppen din, noe rødt, en bok du nylig har lest — og deltakerne løper for å finne den hjemme og vise den fram på kamera.</p>
+            <p>Poeng til den som er raskest tilbake, og til den med mest interessante gjenstand. Brukes når som helst et digitalt møte trenger en energi-boost.</p>
+          </div>
+        </details>
+        <details class="ds-details">
+          <summary>3-spørsmålsleken</summary>
+          <div>
+            <p class="meta" style="margin-bottom:var(--ds-size-3);"><span>⏱ Opptil 1 time</span><span>·</span><span>👥 2–10 personer</span><span>·</span><span>Lav</span></p>
+            <p>Hver deltaker skriver tre åpne spørsmål på hver sin lapp — f.eks. «Når lo du sist av full hals?», «Hvilken ferdighet vil du helst lære deg?». Deltakerne går rundt og stiller hverandre spørsmål én til én; når noen har svart, gir spørsmålsstilleren fra seg lappen.</p>
+            <p>Fortsett til alle har snakket med alle, og heng lappene opp på veggen etterpå som samtalestartere. Brukes tidlig i et teams liv, eller når teamet gjenforenes etter en pause.</p>
+          </div>
+        </details>
+        <details class="ds-details">
+          <summary>To sanne, én usann</summary>
+          <div>
+            <p class="meta" style="margin-bottom:var(--ds-size-3);"><span>⏱ Opptil 1 time</span><span>·</span><span>👥 2–10 personer</span><span>·</span><span>Lav</span></p>
+            <p>Hver deltaker finner på tre påstander om seg selv — to sanne og én usann — og resten av gruppen gjetter hvilken som er usann, før personen avslører svaret. Kan varieres med fire påstander der to er usanne.</p>
+            <p>Deltakerne bestemmer selv hvor mye de vil dele. Brukes tidlig i et teams liv, eller når teamet gjenforenes etter en pause.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <h3>Om nettstedet</h3>
+      <p style="font-size:var(--ds-body-sm-font-size); color:var(--ds-color-text-subtle); max-width:32ch; margin:0;">
+        En norsk, redaksjonelt bearbeidet utgave av
+        <a href="https://oecd-opsi.org/guide/service-design/" target="_blank" rel="noopener">OECD OPSI sin veileder om tjenestedesign</a>
+        og verktøykassen
+        <a href="https://oecd-opsi.org/toolkits/toolbox-for-designing-digital-public-services/" target="_blank" rel="noopener">Toolbox for Designing Digital Public Services</a>,
+        tilpasset norske lover, aktører og ressurser. Bygget med
+        <a href="https://designsystemet.no/" target="_blank" rel="noopener">designsystemet.no</a>.
+      </p>
+    </div>
+    <div>
+      <h3>Kilder</h3>
+      <ul>
+        <li><a href="https://oecd-opsi.org/guide/service-design/" target="_blank" rel="noopener">OECD OPSI — Service Design</a></li>
+        <li><a href="https://digiriik.eesti.ee/" target="_blank" rel="noopener">digiriik.eesti.ee (Estland)</a></li>
+        <li><a href="https://designsystemet.no/" target="_blank" rel="noopener">designsystemet.no</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Norske ressurser</h3>
+      <ul>
+        <li><a href="https://www.digdir.no/innovasjon/design/3075" target="_blank" rel="noopener">Digdir — design og tjenestedesign</a></li>
+        <li><a href="https://doga.no/aktiviteter/design-og-innovasjon/stimulab/" target="_blank" rel="noopener">Stimulab (Digdir/DOGA)</a></li>
+        <li><a href="https://www.uutilsynet.no/" target="_blank" rel="noopener">Tilsynet for universell utforming av ikt</a></li>
+        <li><a href="https://arbeidsgiver.dfo.no/ressurser-og-verktoy/lede-prosesser-og-moter/involvere-utforske-og-prioritere/brukerinvolvering" target="_blank" rel="noopener">DFØ — brukerinvolvering</a></li>
+        <li><a href="https://designsystemet.no/no/best-practices" target="_blank" rel="noopener">designsystemet.no — beste praksis</a></li>
+      </ul>
+    </div>
+    <p class="fine">
+      Ikke en offisiell nettside for Digitaliseringsdirektoratet (Digdir), DOGA eller OECD. Tekstene er skrevet på nytt på norsk med utgangspunkt i den faktiske strukturen til kildene over, og lenker videre til dem der det er relevant. Innhold lisensiert under
+      <a href="https://creativecommons.org/licenses/by-sa/3.0/igo/" target="_blank" rel="noopener">CC BY-SA 3.0 IGO</a>, samme lisens som OECD OPSI bruker. Kildekode på
+      <a href="https://github.com/FinnurO/tjenestedesign-no" target="_blank" rel="noopener">GitHub</a>.
+    </p>
+    <p class="fine">
+      <strong>Laget utelukkende med KI-agenter</strong> (Claude/Claude Code) — research, tekst, oversettelse, design og kode. Ingen del av innholdet er manuelt skrevet eller faktasjekket av et menneske utover det som står i denne merknaden; behandle det deretter, og se
+      <a href="https://github.com/FinnurO/tjenestedesign-no/issues/1" target="_blank" rel="noopener">fremdriftsplanen</a> for kjente hull i dekningen.
+    </p>
+  </div>
+</footer>
+
+<button type="button" class="ds-button feedback-fab" data-color="accent" id="feedback-open-btn" aria-haspopup="dialog">
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+  <span class="btn-label">Gi tilbakemelding</span>
+</button>
+
+<dialog class="feedback-dialog" id="feedback-dialog" aria-labelledby="feedback-dialog-title">
+  <div class="feedback-dialog__body">
+    <h2 id="feedback-dialog-title">Gi tilbakemelding</h2>
+    <p class="lead">Sendes som et innspill på GitHub — du logger inn med (eller oppretter) en gratis GitHub-konto for å fullføre innsendingen der.</p>
+    <p class="feedback-hint">Vi tar automatisk med hvilke seksjoner du har åpnet på siden (se under). Vil du sitere en bestemt setning: lukk dette vinduet, marker teksten på siden, og trykk «Gi tilbakemelding» på nytt — da blir den sitert her også.</p>
+    <div class="feedback-context" id="feedback-context"></div>
+    <div class="feedback-field">
+      <label for="feedback-text">Hva vil du si noe om?</label>
+      <textarea id="feedback-text" placeholder="Skriv tilbakemeldingen din her …"></textarea>
+    </div>
+    <div class="feedback-actions">
+      <button type="button" class="ds-button" data-variant="tertiary" data-color="neutral" id="feedback-cancel-btn">Avbryt</button>
+      <button type="button" class="ds-button" data-color="accent" id="feedback-submit-btn">Send inn på GitHub →</button>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  // --- Bridge Artifact-/nettleser-tema til designsystemet sitt data-color-scheme ---
+  var root = document.documentElement;
+  function syncScheme(){
+    var t = root.getAttribute('data-theme');
+    root.setAttribute('data-color-scheme', t === 'dark' ? 'dark' : t === 'light' ? 'light' : 'auto');
+  }
+  syncScheme();
+  new MutationObserver(syncScheme).observe(root, { attributes:true, attributeFilter:['data-theme'] });
+
+  // --- Tilbakemelding: åpner GitHub sitt "nytt issue"-skjema, forhåndsutfylt med kontekst ---
+  var fbOpenBtn = document.getElementById('feedback-open-btn');
+  var fbDialog = document.getElementById('feedback-dialog');
+  if(fbOpenBtn && fbDialog && typeof fbDialog.showModal === 'function'){
+    var fbCancelBtn = document.getElementById('feedback-cancel-btn');
+    var fbSubmitBtn = document.getElementById('feedback-submit-btn');
+    var fbTextEl = document.getElementById('feedback-text');
+    var fbCtxEl = document.getElementById('feedback-context');
+    var fbPendingSelection = '';
+
+    function fbGatherContext(){
+      var openSections = Array.prototype.slice.call(document.querySelectorAll('main details[open] > summary'))
+        .map(function(s){
+          var title = s.querySelector('.s-title');
+          var text = title ? title.textContent : s.textContent;
+          return text.trim().replace(/\s+/g,' ');
+        })
+        .filter(Boolean);
+      return { url: location.href, title: document.title, openSections: openSections, selection: fbPendingSelection };
+    }
+
+    function fbEsc(s){
+      var d = document.createElement('div'); d.textContent = s; return d.innerHTML;
+    }
+
+    function fbRenderContext(ctx){
+      var lines = ['<div><strong>Side:</strong> ' + fbEsc(ctx.title) + '</div>'];
+      if(ctx.openSections.length){
+        lines.push('<div><strong>Åpne seksjoner:</strong> ' + fbEsc(ctx.openSections.slice(0,4).join(' › ')) + '</div>');
+      }
+      if(ctx.selection){
+        var sel = ctx.selection.length > 200 ? ctx.selection.slice(0,200) + '…' : ctx.selection;
+        lines.push('<div><strong>Merket tekst:</strong> «' + fbEsc(sel) + '»</div>');
+      }
+      fbCtxEl.innerHTML = lines.join('');
+    }
+
+    fbOpenBtn.addEventListener('click', function(){
+      var sel = window.getSelection ? window.getSelection().toString().trim() : '';
+      fbPendingSelection = sel;
+      fbRenderContext(fbGatherContext());
+      fbTextEl.value = '';
+      fbDialog.showModal();
+      fbTextEl.focus();
+    });
+    fbCancelBtn.addEventListener('click', function(){ fbDialog.close(); });
+    fbDialog.addEventListener('click', function(e){ if(e.target === fbDialog) fbDialog.close(); });
+    fbDialog.addEventListener('cancel', function(){});
+    fbSubmitBtn.addEventListener('click', function(){
+      var ctx = fbGatherContext();
+      var body = '**Side:** ' + ctx.url + '\n';
+      if(ctx.openSections.length){ body += '**Åpne seksjoner:** ' + ctx.openSections.join(' › ') + '\n'; }
+      if(ctx.selection){ body += '**Merket tekst:**\n> ' + ctx.selection.replace(/\n/g,'\n> ') + '\n'; }
+      body += '\n---\n\n' + (fbTextEl.value.trim() || '_(ingen tekst skrevet inn)_');
+      var title = 'Tilbakemelding: ' + ctx.title;
+      var issueUrl = 'https://github.com/FinnurO/tjenestedesign-no/issues/new'
+        + '?title=' + encodeURIComponent(title)
+        + '&body=' + encodeURIComponent(body)
+        + '&labels=' + encodeURIComponent('tilbakemelding');
+      window.open(issueUrl, '_blank', 'noopener');
+      fbDialog.close();
+    });
+  }
+})();
+</script>
+</body>
+</html>
