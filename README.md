@@ -94,6 +94,30 @@ For å legge til en ny, oversatt verktøykasse: kopier strukturen i
 `<details class="phase">`), lag en ny mappe under `verktoykasser/`, og
 oppdater kortet i katalogen samt `sitemap.xml`.
 
+## Deploy og PR-forhåndsvisninger
+
+Publiseringen kjører via GitHub Actions, ikke direkte fra `main`:
+
+- **`main`** er kildekode-branchen — her jobber vi, her går PR-er mot.
+- **`gh-pages`** er branchen GitHub Pages faktisk serverer fra (Settings →
+  Pages → Deploy from branch → `gh-pages`).
+- **`.github/workflows/deploy.yml`** kopierer `main` til `gh-pages` sin
+  rot ved hvert push til `main`. Ingen bygg-steg — innholdet er allerede
+  ferdig statisk HTML.
+- **`.github/workflows/pr-preview.yml`** deployer hver åpne PR til
+  `gh-pages/pr-preview/pr-<nummer>/` og legger igjen en kommentar med
+  forhåndsvisningslenke (`https://finnuro.github.io/tjenestedesign-no/pr-preview/pr-<nummer>/`).
+  Ryddes automatisk bort når PR-en lukkes.
+
+Begge bruker [`JamesIves/github-pages-deploy-action`](https://github.com/JamesIves/github-pages-deploy-action)
+(direkte, og indirekte via [`rossjrw/pr-preview-action`](https://github.com/rossjrw/pr-preview-action)
+for forhåndsvisningene), som automatisk ekskluderer `.git`/`.github` fra
+det som publiseres.
+
+**Forutsetning:** workflow-tillatelser må stå på «Read and write» under
+Settings → Actions → General → Workflow permissions, ellers kan
+workflowen ikke pushe til `gh-pages`.
+
 ## Lisens
 
 Innholdet er lisensiert under **CC BY-SA 3.0 IGO** — samme lisens som OECD
