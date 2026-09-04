@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bygg en Altinn Studio-app</title>
+<meta name="description" content="Praktisk, trinnvis prosjektmetode for å lage en digital tjeneste i Altinn Studio, avledet fra et reelt Digdir-prosjekt — fra avklaring til sluttrapport.">
+<link rel="canonical" href="https://finnuro.github.io/tjenestedesign-no/verktoykasser/digitale-offentlige-tjenester/altinn-studio-app/">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../../assets/css/fonts.css">
+<link rel="stylesheet" href="../../../assets/css/vendor/designsystemet.css">
+<link rel="stylesheet" href="../../../assets/css/vendor/designsystemet-theme.css">
+<link rel="stylesheet" href="../../../assets/css/site.css">
+<meta property="og:title" content="Bygg en Altinn Studio-app">
+<meta property="og:description" content="Praktisk, trinnvis prosjektmetode for å lage en digital tjeneste i Altinn Studio, avledet fra et reelt Digdir-prosjekt — fra avklaring til sluttrapport.">
+<meta property="og:type" content="website">
+</head>
+<body>
+
+<a class="ds-link skip-to-content" href="#main">Hopp til innhold</a>
+
+<div class="disclaimer-bar">
+  <div class="wrap">
+    <span>📎 <strong>Uoffisiell norsk bearbeiding</strong> av OECD OPSI sin veileder <em>Service Design</em>, <strong>laget utelukkende av KI-agenter</strong> — ikke en offisiell Digdir- eller OECD-tjeneste.</span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand plain" href="../../../">
+      <span class="brand__mark" aria-hidden="true">TD</span>
+      <span class="brand__text">
+        <span class="brand__title">Tjenestedesign i offentlig sektor</span>
+        <span class="brand__subtitle">Norsk bearbeiding av OECD OPSI</span>
+      </span>
+    </a>
+    <nav class="main-nav" aria-label="Hovedmeny">
+      <a href="../../../">Forside</a>
+      <a href="../../../guide/">Guide</a>
+      <a href="../../../verktoykasser/">Verktøykasser</a>
+      <a href="../../../verktoykasser/digitale-offentlige-tjenester/">Digital verktøykasse</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap page-head">
+    <span style="font-size:var(--ds-body-xs-font-size); color:var(--ds-color-text-subtle);"><a class="ds-link" href="../../../">Forside</a> / <a class="ds-link" href="../../">Verktøykasser</a> / <a class="ds-link" href="../">Digital verktøykasse</a> / Altinn Studio-app</span>
+    <h1>Praktisk metode: bygg en Altinn Studio-app</h1>
+    <p class="lead">En konkret, trinnvis prosjektmetode for å lage en digital tjeneste i Altinn Studio — fra avklaring til sluttrapport. Utdyper fasen «Utvikle IT-løsningen» i verktøykassen, spesifikt for Altinn Studio som plattform.</p>
+  </div>
+
+  <div class="wrap" style="padding-block: var(--ds-size-4) 0;">
+    <div class="ds-alert" data-color="info">
+      <div class="attribution-box">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+        <p style="margin:0; font-size:var(--ds-body-sm-font-size);">
+          Avledet fra praktisk prosjekterfaring med å bygge apper i Altinn Studio. Mye av arbeidet følger et gjenbrukbart mønster på tvers av prosjekter, uavhengig av hva den enkelte tjenesten faktisk gjør — resten er spesifikt for hver enkelt tjeneste. Denne siden gjengir det gjenbrukbare mønsteret, forkortet for de mest kode-nære detaljene, som hører hjemme i <a class="ds-link" href="https://docs.altinn.studio/nb/altinn-studio/v8/guides/development/" target="_blank" rel="noopener">Altinn Studio sin egen utviklerdokumentasjon</a> fremfor her.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap guide-layout">
+    <nav class="guide-nav" aria-label="Innhold i metoden">
+      <a href="#avklaring" data-anchor="avklaring">Fase 0 — Avklaring</a>
+      <a href="#forankring" data-anchor="forankring">Fase 1 — Forankring</a>
+      <a href="#oppsett" data-anchor="oppsett">Fase 2 — Oppsett av app</a>
+      <a href="#datamodell-layout" data-anchor="datamodell-layout">Fase 3 — Datamodell og layout</a>
+      <a href="#sikkerhetsinnstillinger" data-anchor="sikkerhetsinnstillinger">Fase 4 — Sikkerhetsinnstillinger</a>
+      <a href="#roller" data-anchor="roller">Fase 5 — Roller og autorisasjon</a>
+      <a href="#prosessmodellering" data-anchor="prosessmodellering">Fase 6 — Prosessmodellering</a>
+      <a href="#vedlegg" data-anchor="vedlegg">Fase 7 — Vedlegg</a>
+      <a href="#integrasjoner" data-anchor="integrasjoner">Fase 8 — Integrasjoner</a>
+      <a href="#produksjonsklar" data-anchor="produksjonsklar">Fase 9 — Klar for produksjon</a>
+      <a href="#sikkerhetsvalidering" data-anchor="sikkerhetsvalidering">Fase 10 — Sikkerhetsvalidering</a>
+      <a href="#verifisering" data-anchor="verifisering">Fase 11 — Verifisering</a>
+      <a href="#sluttrapport" data-anchor="sluttrapport">Fase 12 — Sluttrapport</a>
+      <a href="#mal" data-anchor="mal">Oppsummert mal</a>
+    </nav>
+
+    <article class="guide-article">
+      <section id="avklaring">
+        <span class="section-num">Fase 0 — Før oppstart</span>
+        <h2>Avklaring</h2>
+        <p class="intro">Fyll ut en «Om applikasjonen»-tabell før noe kode skrives. Ingen utviklingsoppgave bør opprettes før tabellen er utfylt og godkjent av oppdragsgiver/produkteier.</p>
+        <div class="table-scroll">
+          <table class="ds-table">
+            <thead><tr><th scope="col">Spørsmål</th><th scope="col">Eksempel</th></tr></thead>
+            <tbody>
+              <tr><td>Migrering fra Altinn 2, eller ny tjeneste?</td><td>Ny</td></tr>
+              <tr><td>Foreligger godkjent designskisse?</td><td>Ja</td></tr>
+              <tr><td>Språk (bokmål/nynorsk/engelsk)</td><td>Bokmål</td></tr>
+              <tr><td>Hvilke eksterne API-er/registre trengs?</td><td>Folkeregisteret, et fagregister</td></tr>
+              <tr><td>Skal tjenesten bruke eFormidling?</td><td>Ja</td></tr>
+              <tr><td>Skal frontend låses før produksjon?</td><td>Ja</td></tr>
+              <tr><td>Skal appen reagere på hendelser ved mottak av skjemadata?</td><td>Nei</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="forankring">
+        <span class="section-num">Fase 1</span>
+        <h2>Forankring</h2>
+        <p>To separate godkjenningssteg <em>før</em> utvikling starter, hver med egen sjekkliste:</p>
+        <ul>
+          <li><strong>Forankre kravspesifikasjon</strong> — kravspesifikasjon utarbeidet → godkjent.</li>
+          <li><strong>Forankre design</strong> — designutkast utarbeidet → klart for utvikling.</li>
+        </ul>
+        <p>Poenget med å ha disse som egne, avsluttbare oppgaver — ikke bare et avkrysningspunkt i en prosjektplan — er å tvinge fram en eksplisitt godkjenning fra tjenesteeier før noen kode skrives.</p>
+      </section>
+
+      <section id="oppsett">
+        <span class="section-num">Fase 2</span>
+        <h2>Oppsett av app i Altinn Studio</h2>
+        <ol>
+          <li>Opprett appen i Altinn Studio-editoren.</li>
+          <li>Legg hemmeligheter (secrets) i <code>.gitignore</code> med en gang.</li>
+          <li>Dokumenter lenker til testmiljø (TT02) og produksjon.</li>
+        </ol>
+      </section>
+
+      <section id="datamodell-layout">
+        <span class="section-num">Fase 3</span>
+        <h2>Datamodell og layout</h2>
+        <p><strong>Datamodell(er):</strong> lag skjemaets datamodell.</p>
+        <p><strong>Layout-filer:</strong> bygg én layoutfil per side i skjemaet. Et vanlig navnemønster er nummerert prefiks + funksjon, alltid avsluttet med en oppsummeringsside:</p>
+        <p><code>S01_Forside → S02_&lt;kontekst&gt; → S03_&lt;søker&gt; → S04_&lt;institusjon&gt; → S99_Summary</code></p>
+        <p><strong>Tekstressursfiler:</strong> én per språk. Huskeliste: appnavn og navn på alle sidene skal alltid oversettes — glemmes lett fordi det ikke er en «funksjonell» tekst.</p>
+      </section>
+
+      <section id="sikkerhetsinnstillinger">
+        <span class="section-num">Fase 4</span>
+        <h2>Sikkerhetsinnstillinger</h2>
+        <p>Gjøres i Altinn Studio:</p>
+        <ul>
+          <li>Tilgangsregler — hver regel skal ha alle nødvendige kategorier (hvem, hva, hvilken handling). Bruk Altinn Studio til å validere at reglene er gyldige; ugyldige regler tyder typisk på at en kategori mangler.</li>
+          <li>Sikkerhetsnivå satt eksplisitt.</li>
+          <li>Oppstartskontroll (hvem som kan starte tjenesten) satt eksplisitt.</li>
+          <li>Øvrig oppsett: automatisk sletting, arkivvisning, kopiering av eksemplar, visning av påbegynte eksemplarer.</li>
+        </ul>
+      </section>
+
+      <section id="roller">
+        <span class="section-num">Fase 5</span>
+        <h2>Roller og autorisasjon</h2>
+        <p>Definer en rollematrise (kode, navn, kategori) og kryss av rettigheter per rolle: Les, Skriv, Slett, Start, Bekreft, Betal, Signer, Avslå, Bekreft mottatt (tjenesteeier). Typisk minimum:</p>
+        <ul>
+          <li><strong>Privatperson</strong> — rettigheter på hele tjenesten.</li>
+          <li><strong>Tjenesteeier</strong> (organisasjon) — lese-/skrive-/start-rettigheter, uten slette-rett.</li>
+        </ul>
+      </section>
+
+      <section id="prosessmodellering">
+        <span class="section-num">Fase 6</span>
+        <h2>Prosessmodellering</h2>
+        <p>Modelleres som en prosess (BPMN) i Altinn Studio:</p>
+        <p><code>Instansiering → Utfylling → [eFormidling/integrasjon] → Tilbakemelding → Innsending</code></p>
+        <p>Tilpass steg-typene (utfylling, signering, bekreftelse, tilbakemelding) til faktisk behov. Sjekk Altinn Studio sin dokumentasjon for hvilke kombinasjoner og versjonskrav som gjelder — dette endrer seg med plattformen.</p>
+      </section>
+
+      <section id="vedlegg">
+        <span class="section-num">Fase 7</span>
+        <h2>Vedlegg</h2>
+        <div class="table-scroll">
+          <table class="ds-table">
+            <thead><tr><th scope="col">Felt</th><th scope="col">Beskrivelse</th></tr></thead>
+            <tbody>
+              <tr><td>ID</td><td>Vedleggstypens navn (f.eks. «Fullmakt»)</td></tr>
+              <tr><td>Tillatte filformater</td><td>MIME-typer (pdf, docx, jpeg, png osv.)</td></tr>
+              <tr><td>Maks størrelse</td><td>I MB</td></tr>
+              <tr><td>Min/maks antall</td><td>Om vedlegget er obligatorisk og hvor mange som tillates</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="integrasjoner">
+        <span class="section-num">Fase 8</span>
+        <h2>Integrasjoner og app-spesifikk logikk</h2>
+        <p>Her hører de <em>app-spesifikke</em> oppgavene hjemme — de som ikke er del av standardmalen, men opprettes etter behov for den enkelte tjenesten. Typiske eksempler: datovalidering, forretningslogikk spesifikk for tjenesten, og justert flyt i layout.</p>
+        <p>Typiske byggeklosser: klient mot Maskinporten, hemmeligheter i et sikkert nøkkelvelv, datamodeller og overføringsobjekter, egne tjenesteklasser. Sett opp API-kall mot eksterne registre via Maskinporten, og konfigurer eFormidling for videresending der det er aktuelt — se Altinn Studio sin utviklerdokumentasjon for hvordan.</p>
+      </section>
+
+      <section id="produksjonsklar">
+        <span class="section-num">Fase 9</span>
+        <h2>Klargjøring for produksjon</h2>
+        <ul>
+          <li>Godkjent i testmiljø (TT02) av tjenesteeier.</li>
+          <li>Kodegjennomgang gjennomført.</li>
+          <li>Frontend-versjon låst.</li>
+          <li>Tekst/lenke oppdatert på virksomhetens tjenesteoversikt.</li>
+          <li>README skrevet — beskriv formål, arkitektur og avhengigheter, ikke bare oppsett.</li>
+          <li>Huskeliste: test tilgangsstyring, test lenke/info der tjenesten skal være synlig.</li>
+        </ul>
+      </section>
+
+      <section id="sikkerhetsvalidering">
+        <span class="section-num">Fase 10</span>
+        <h2>Validere sikkerhetskrav</h2>
+        <p class="intro">En egen sjekkliste kjøres for <em>hver</em> app som utvikles, knyttet til virksomhetens interne sikkerhetskrav — spør sikkerhetsansvarlig hos dere om en tilsvarende liste, hvis dere ikke allerede har en.</p>
+        <p><strong>Sikkerhetstesting:</strong> statisk kodeanalyse gjennomført (funn med middels alvorlighetsgrad eller høyere vurdert/utbedret), avhengighetsanalyse gjennomført (sårbarheter i tredjepartspakker vurdert), en oversikt over avhengigheter (SBOM) generert.</p>
+        <p><strong>Kravspekk, arkitektur og design:</strong> sikkerhetsbegrensninger fra kravspesifikasjonen identifisert og fulgt opp med tjenesteeier, vesentlige dataflyter og bruk av tredjepartskomponenter dokumentert og begrunnet i README, eksterne avhengigheter sikkerhetsvurdert og hentet fra pålitelige, aktivt vedlikeholdte kilder, ingen tilstand delt på tvers av instanser av tjenesten.</p>
+        <p>De kode-nære detaljene her (spesifikke rammeverksmønstre, TLS-konfigurasjon og liknende) hører hjemme i Altinn Studio sin egen utviklerdokumentasjon og deres eget sikkerhetsteams rutiner, ikke gjengitt her.</p>
+      </section>
+
+      <section id="verifisering">
+        <span class="section-num">Fase 11</span>
+        <h2>Verifisering etter produksjonsetting</h2>
+        <ul>
+          <li>Verifisert i produksjon av tjenesteeier.</li>
+          <li>Verifisert tekst/lenke der tjenesten er publisert.</li>
+          <li>Huskeliste: verifiser tilgangsstyring, verifiser at innsendte skjema faktisk mottas riktig sted.</li>
+        </ul>
+      </section>
+
+      <section id="sluttrapport">
+        <span class="section-num">Fase 12</span>
+        <h2>Sluttrapport</h2>
+        <ul>
+          <li>Sluttrapport utarbeidet i henhold til virksomhetens interne rutine.</li>
+          <li>Sluttrapport oversendt tjenesteeier.</li>
+        </ul>
+      </section>
+
+      <section id="mal">
+        <span class="section-num">Oppsummert</span>
+        <h2>Mal for underoppgaver</h2>
+        <p class="intro">Standardsekvensen — 10 faste steg som går igjen på tvers av Altinn Studio-prosjekter:</p>
+        <ol>
+          <li>Forankre kravspesifikasjon</li>
+          <li>Forankre design</li>
+          <li>Lag skjemaets datamodell(er)</li>
+          <li>Lag layout-filer</li>
+          <li>Lag tekstressursfiler</li>
+          <li>Sikkerhetsinnstillinger</li>
+          <li>Klargjør applikasjon for produksjonsetting</li>
+          <li>Valider sikkerhetskrav</li>
+          <li>Verifiser applikasjon etter produksjonsetting</li>
+          <li>Lag sluttrapport</li>
+        </ol>
+        <p>Pluss et variabelt antall app-spesifikke oppgaver (integrasjoner og forretningslogikk) etter behov.</p>
+        <p><strong>Verdt å vurdere:</strong> siden dette allerede er en de-facto mal, kan det være verdt å sette opp faste oppgavemaler (issue-maler) for disse 10 stegene, slik at de opprettes automatisk når et nytt prosjekt starter — i stedet for at hvert prosjekt kopierer dem manuelt.</p>
+      </section>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <h3>Om nettstedet</h3>
+      <p style="font-size:var(--ds-body-sm-font-size); color:var(--ds-color-text-subtle); max-width:32ch; margin:0;">
+        En norsk, redaksjonelt bearbeidet utgave av
+        <a href="https://oecd-opsi.org/guide/service-design/" target="_blank" rel="noopener">OECD OPSI sin veileder om tjenestedesign</a>
+        og verktøykassen
+        <a href="https://oecd-opsi.org/toolkits/toolbox-for-designing-digital-public-services/" target="_blank" rel="noopener">Toolbox for Designing Digital Public Services</a>,
+        tilpasset norske lover, aktører og ressurser. Bygget med
+        <a href="https://designsystemet.no/" target="_blank" rel="noopener">designsystemet.no</a>.
+      </p>
+    </div>
+    <div>
+      <h3>Kilder</h3>
+      <ul>
+        <li><a href="https://oecd-opsi.org/guide/service-design/" target="_blank" rel="noopener">OECD OPSI — Service Design</a></li>
+        <li><a href="https://digiriik.eesti.ee/" target="_blank" rel="noopener">digiriik.eesti.ee (Estland)</a></li>
+        <li><a href="https://designsystemet.no/" target="_blank" rel="noopener">designsystemet.no</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Norske ressurser</h3>
+      <ul>
+        <li><a href="https://www.digdir.no/innovasjon/design/3075" target="_blank" rel="noopener">Digdir — design og tjenestedesign</a></li>
+        <li><a href="https://doga.no/aktiviteter/design-og-innovasjon/stimulab/" target="_blank" rel="noopener">Stimulab (Digdir/DOGA)</a></li>
+        <li><a href="https://www.uutilsynet.no/" target="_blank" rel="noopener">Tilsynet for universell utforming av ikt</a></li>
+        <li><a href="https://arbeidsgiver.dfo.no/ressurser-og-verktoy/lede-prosesser-og-moter/involvere-utforske-og-prioritere/brukerinvolvering" target="_blank" rel="noopener">DFØ — brukerinvolvering</a></li>
+        <li><a href="https://designsystemet.no/no/best-practices" target="_blank" rel="noopener">designsystemet.no — beste praksis</a></li>
+      </ul>
+    </div>
+    <p class="fine">
+      Ikke en offisiell nettside for Digitaliseringsdirektoratet (Digdir), DOGA eller OECD. Tekstene er skrevet på nytt på norsk med utgangspunkt i den faktiske strukturen til kildene over, og lenker videre til dem der det er relevant. Innhold lisensiert under
+      <a href="https://creativecommons.org/licenses/by-sa/3.0/igo/" target="_blank" rel="noopener">CC BY-SA 3.0 IGO</a>, samme lisens som OECD OPSI bruker. Kildekode på
+      <a href="https://github.com/FinnurO/tjenestedesign-no" target="_blank" rel="noopener">GitHub</a>.
+    </p>
+    <p class="fine">
+      <strong>Laget utelukkende med KI-agenter</strong> (Claude/Claude Code) — research, tekst, oversettelse, design og kode. Ingen del av innholdet er manuelt skrevet eller faktasjekket av et menneske utover det som står i denne merknaden; behandle det deretter, og se
+      <a href="https://github.com/FinnurO/tjenestedesign-no/issues/1" target="_blank" rel="noopener">fremdriftsplanen</a> for kjente hull i dekningen.
+    </p>
+  </div>
+</footer>
+
+<button type="button" class="ds-button feedback-fab" data-color="accent" id="feedback-open-btn" aria-haspopup="dialog">
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+  <span class="btn-label">Gi tilbakemelding</span>
+</button>
+
+<dialog class="feedback-dialog" id="feedback-dialog" aria-labelledby="feedback-dialog-title">
+  <div class="feedback-dialog__body">
+    <h2 id="feedback-dialog-title">Gi tilbakemelding</h2>
+    <p class="lead">Sendes som et innspill på GitHub — du logger inn med (eller oppretter) en gratis GitHub-konto for å fullføre innsendingen der.</p>
+    <p class="feedback-hint">Vi tar automatisk med hvilke seksjoner du har åpnet på siden (se under). Vil du sitere en bestemt setning: lukk dette vinduet, marker teksten på siden, og trykk «Gi tilbakemelding» på nytt — da blir den sitert her også.</p>
+    <div class="feedback-context" id="feedback-context"></div>
+    <div class="feedback-field">
+      <label for="feedback-text">Hva vil du si noe om?</label>
+      <textarea id="feedback-text" placeholder="Skriv tilbakemeldingen din her …"></textarea>
+    </div>
+    <div class="feedback-actions">
+      <button type="button" class="ds-button" data-variant="tertiary" data-color="neutral" id="feedback-cancel-btn">Avbryt</button>
+      <button type="button" class="ds-button" data-color="accent" id="feedback-submit-btn">Send inn på GitHub →</button>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  // --- Bridge Artifact-/nettleser-tema til designsystemet sitt data-color-scheme ---
+  var root = document.documentElement;
+  function syncScheme(){
+    var t = root.getAttribute('data-theme');
+    root.setAttribute('data-color-scheme', t === 'dark' ? 'dark' : t === 'light' ? 'light' : 'auto');
+  }
+  syncScheme();
+  new MutationObserver(syncScheme).observe(root, { attributes:true, attributeFilter:['data-theme'] });
+
+  // --- Guide: fremhev aktivt underkapittel i venstremenyen ved skrolling ---
+  var guideSections = document.querySelectorAll('.guide-article > section[id]');
+  var guideLinks = document.querySelectorAll('.guide-nav a');
+  if(guideSections.length && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          guideLinks.forEach(function(l){ l.classList.toggle('active', l.dataset.anchor === e.target.id); });
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    guideSections.forEach(function(s){ io.observe(s); });
+  }
+
+  // --- Tilbakemelding: åpner GitHub sitt "nytt issue"-skjema, forhåndsutfylt med kontekst ---
+  var fbOpenBtn = document.getElementById('feedback-open-btn');
+  var fbDialog = document.getElementById('feedback-dialog');
+  if(fbOpenBtn && fbDialog && typeof fbDialog.showModal === 'function'){
+    var fbCancelBtn = document.getElementById('feedback-cancel-btn');
+    var fbSubmitBtn = document.getElementById('feedback-submit-btn');
+    var fbTextEl = document.getElementById('feedback-text');
+    var fbCtxEl = document.getElementById('feedback-context');
+    var fbPendingSelection = '';
+
+    function fbGatherContext(){
+      var openSections = Array.prototype.slice.call(document.querySelectorAll('main details[open] > summary'))
+        .map(function(s){
+          var title = s.querySelector('.s-title');
+          var text = title ? title.textContent : s.textContent;
+          return text.trim().replace(/\s+/g,' ');
+        })
+        .filter(Boolean);
+      return { url: location.href, title: document.title, openSections: openSections, selection: fbPendingSelection };
+    }
+
+    function fbEsc(s){
+      var d = document.createElement('div'); d.textContent = s; return d.innerHTML;
+    }
+
+    function fbRenderContext(ctx){
+      var lines = ['<div><strong>Side:</strong> ' + fbEsc(ctx.title) + '</div>'];
+      if(ctx.openSections.length){
+        lines.push('<div><strong>Åpne seksjoner:</strong> ' + fbEsc(ctx.openSections.slice(0,4).join(' › ')) + '</div>');
+      }
+      if(ctx.selection){
+        var sel = ctx.selection.length > 200 ? ctx.selection.slice(0,200) + '…' : ctx.selection;
+        lines.push('<div><strong>Merket tekst:</strong> «' + fbEsc(sel) + '»</div>');
+      }
+      fbCtxEl.innerHTML = lines.join('');
+    }
+
+    fbOpenBtn.addEventListener('click', function(){
+      var sel = window.getSelection ? window.getSelection().toString().trim() : '';
+      fbPendingSelection = sel;
+      fbRenderContext(fbGatherContext());
+      fbTextEl.value = '';
+      fbDialog.showModal();
+      fbTextEl.focus();
+    });
+    fbCancelBtn.addEventListener('click', function(){ fbDialog.close(); });
+    fbDialog.addEventListener('click', function(e){ if(e.target === fbDialog) fbDialog.close(); });
+    fbDialog.addEventListener('cancel', function(){});
+    fbSubmitBtn.addEventListener('click', function(){
+      var ctx = fbGatherContext();
+      var body = '**Side:** ' + ctx.url + '\n';
+      if(ctx.openSections.length){ body += '**Åpne seksjoner:** ' + ctx.openSections.join(' › ') + '\n'; }
+      if(ctx.selection){ body += '**Merket tekst:**\n> ' + ctx.selection.replace(/\n/g,'\n> ') + '\n'; }
+      body += '\n---\n\n' + (fbTextEl.value.trim() || '_(ingen tekst skrevet inn)_');
+      var title = 'Tilbakemelding: ' + ctx.title;
+      var issueUrl = 'https://github.com/FinnurO/tjenestedesign-no/issues/new'
+        + '?title=' + encodeURIComponent(title)
+        + '&body=' + encodeURIComponent(body)
+        + '&labels=' + encodeURIComponent('tilbakemelding');
+      window.open(issueUrl, '_blank', 'noopener');
+      fbDialog.close();
+    });
+  }
+})();
+</script>
+</body>
+</html>
