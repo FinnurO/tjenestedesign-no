@@ -208,6 +208,7 @@ table.ds-table caption{ text-align:left; font-size: var(--ds-body-sm-font-size);
 .phase-subarticles-list .ds-details ul,.phase-subarticles-list .ds-details ol, .tool-details-list .ds-details ul,.tool-details-list .ds-details ol{ margin:0 0 var(--ds-size-4); padding-left:1.1em; font-size: var(--ds-body-sm-font-size); display:flex; flex-direction:column; gap: var(--ds-size-2); }
 .phase-subarticles-list .ds-details ol, .tool-details-list .ds-details ol{ list-style:decimal; }
 .tool-details-list .meta{ font-weight:500; }
+.no-resource-label{ display:block; font-size: var(--ds-body-xs-font-size); font-weight:600; text-transform:uppercase; letter-spacing:.03em; color: var(--ds-color-accent-text-default); margin-bottom: var(--ds-size-1); }
 
 .view{ }
 .view[hidden]{ display:none; }
