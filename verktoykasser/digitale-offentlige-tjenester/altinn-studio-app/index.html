@@ -55,7 +55,7 @@
       <div class="attribution-box">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
         <p style="margin:0; font-size:var(--ds-body-sm-font-size);">
-          Avledet fra et virkelig prosjekt: epicen <a class="ds-link" href="https://github.com/Altinn/app-migration/issues/999" target="_blank" rel="noopener">Altinn/app-migration #999</a> («Søk om å få slettet fravær fra vitnemålet») og dens 13 underoppgaver, i det offentlige repoet <em>Altinn/app-migration</em>. 10 av de 13 underoppgavene viste seg å være en gjenbrukbar, generisk prosessmal som gikk igjen på tvers av prosjekter — resten var spesifikke for akkurat den tjenesten. Denne siden gjengir malen, forkortet for de mest kode-nære detaljene, som hører hjemme i <a class="ds-link" href="https://docs.altinn.studio/nb/altinn-studio/v8/guides/development/" target="_blank" rel="noopener">Altinn Studio sin egen utviklerdokumentasjon</a> fremfor her.
+          Avledet fra praktisk prosjekterfaring med å bygge apper i Altinn Studio. Mye av arbeidet følger et gjenbrukbart mønster på tvers av prosjekter, uavhengig av hva den enkelte tjenesten faktisk gjør — resten er spesifikt for hver enkelt tjeneste. Denne siden gjengir det gjenbrukbare mønsteret, forkortet for de mest kode-nære detaljene, som hører hjemme i <a class="ds-link" href="https://docs.altinn.studio/nb/altinn-studio/v8/guides/development/" target="_blank" rel="noopener">Altinn Studio sin egen utviklerdokumentasjon</a> fremfor her.
         </p>
       </div>
     </div>
@@ -108,7 +108,7 @@
           <li><strong>Forankre kravspesifikasjon</strong> — kravspesifikasjon utarbeidet → godkjent.</li>
           <li><strong>Forankre design</strong> — designutkast utarbeidet → klart for utvikling.</li>
         </ul>
-        <p>Poenget med å ha disse som egne, avsluttbare oppgaver — ikke bare et avkrysningspunkt i et epos — er å tvinge fram en eksplisitt godkjenning fra tjenesteeier før noen kode skrives.</p>
+        <p>Poenget med å ha disse som egne, avsluttbare oppgaver — ikke bare et avkrysningspunkt i en prosjektplan — er å tvinge fram en eksplisitt godkjenning fra tjenesteeier før noen kode skrives.</p>
       </section>
 
       <section id="oppsett">
@@ -179,7 +179,7 @@
       <section id="integrasjoner">
         <span class="section-num">Fase 8</span>
         <h2>Integrasjoner og app-spesifikk logikk</h2>
-        <p>Her hører de <em>app-spesifikke</em> oppgavene hjemme — de som ikke er del av standardmalen, men opprettes etter behov for den enkelte tjenesten. I eksempelprosjektet var det datovalidering, forretningslogikk spesifikk for tjenesten, og oppdatert flyt i layout.</p>
+        <p>Her hører de <em>app-spesifikke</em> oppgavene hjemme — de som ikke er del av standardmalen, men opprettes etter behov for den enkelte tjenesten. Typiske eksempler: datovalidering, forretningslogikk spesifikk for tjenesten, og justert flyt i layout.</p>
         <p>Typiske byggeklosser: klient mot Maskinporten, hemmeligheter i et sikkert nøkkelvelv, datamodeller og overføringsobjekter, egne tjenesteklasser. Sett opp API-kall mot eksterne registre via Maskinporten, og konfigurer eFormidling for videresending der det er aktuelt — se Altinn Studio sin utviklerdokumentasjon for hvordan.</p>
       </section>
 
@@ -227,7 +227,7 @@
       <section id="mal">
         <span class="section-num">Oppsummert</span>
         <h2>Mal for underoppgaver</h2>
-        <p class="intro">Standardsekvensen — 10 faste steg som gikk igjen på tvers av prosjekter i eksempelrepoet:</p>
+        <p class="intro">Standardsekvensen — 10 faste steg som går igjen på tvers av Altinn Studio-prosjekter:</p>
         <ol>
           <li>Forankre kravspesifikasjon</li>
           <li>Forankre design</li>
