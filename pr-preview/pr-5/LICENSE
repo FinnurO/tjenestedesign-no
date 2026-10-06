@@ -1,0 +1,28 @@
+Innholdet i dette repoet (tekst, struktur og illustrasjoner under assets/, med
+mindre annet er angitt i THIRD_PARTY_NOTICES.md) er lisensiert under:
+
+Creative Commons Attribution-ShareAlike 3.0 IGO (CC BY-SA 3.0 IGO)
+
+Dette er den samme lisensen OECD Observatory of Public Sector Innovation
+(OECD OPSI) bruker på oecd-opsi.org, og er valgt for å holde denne norske
+bearbeidingen kompatibel med kildematerialet den bygger videre på.
+
+Fullstendig lisenstekst (bindende):
+https://creativecommons.org/licenses/by-sa/3.0/igo/legalcode
+
+Lesbart sammendrag:
+https://creativecommons.org/licenses/by-sa/3.0/igo/
+
+Kort oppsummert har du lov til å:
+  - Dele  — kopiere og distribuere materialet i ethvert medium eller format
+  - Bearbeide — remixe, endre og bygge videre på materialet
+
+til og med kommersielt, så lenge du:
+  - Krediterer  — oppgir navn på opphavspersonen/kilden, lenker til lisensen,
+    og markerer om endringer er gjort, uten å antyde at kilden går god for
+    din bruk.
+  - Deler likt — distribuerer bidragene dine under samme lisens som originalen.
+
+Merk: koden hentet fra designsystemet.no (@digdir/designsystemet-css) og
+fontfilene under assets/fonts/ og assets/css/fonts.css er IKKE omfattet av
+lisensen over. Se THIRD_PARTY_NOTICES.md for deres respektive lisenser.
